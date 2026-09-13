@@ -1,0 +1,31 @@
+import Layout from "@/components/Layout";
+import { useSeo } from "@/lib/useSeo";
+
+export default function Accessibility() {
+  useSeo({
+    title: "Accessibility Statement",
+    description: "Tempo Community Academy's commitment to an accessible website for all visitors.",
+    path: "/accessibility",
+  });
+
+  return (
+    <Layout>
+      <div className="page-hero">
+        <div className="wrap">
+          <h1>Accessibility statement</h1>
+          <p>Last updated: September 11, 2026</p>
+        </div>
+      </div>
+      <section className="section">
+        <div className="wrap prose">
+          <h2>Our commitment</h2>
+          <p>Tempo Community Academy is committed to making this website usable by everyone, including people who rely on assistive technology. Inclusion is at the heart of what we do in our classrooms, and we hold our website to the same standard.</p>
+          <h2>Standards</h2>
+          <p>We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA. Measures on this site include semantic page structure, sufficient color contrast, visible keyboard focus, full keyboard navigation, text alternatives for meaningful images, labeled form fields, and respect for reduced-motion preferences.</p>
+          <h2>Feedback</h2>
+          <p>If you encounter any barrier using this site, please tell us and we will work to fix it. Email <a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a> or call <a href="tel:+19175829560">917-582-9560</a>. Please include the page address and a description of the problem.</p>
+        </div>
+      </section>
+    </Layout>
+  );
+}
