@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { useSeo } from "@/lib/useSeo";
+import routeMeta from "@/lib/route-meta.json";
 
 const LEADERSHIP = [
   { name: "Inae Kim", role: "Program Director" },
@@ -18,11 +19,7 @@ const INSTRUCTORS = [
 ];
 
 export default function About() {
-  useSeo({
-    title: "About Us",
-    description: "Meet the Tempo Community Academy team: licensed NYS teachers and certified specialists offering personalized enrichment programs in Bayside, Queens.",
-    path: "/about",
-  });
+  useSeo({ path: "/about", ...routeMeta["/about"] });
 
   return (
     <Layout>

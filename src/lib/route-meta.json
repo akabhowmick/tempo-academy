@@ -1,0 +1,44 @@
+{
+  "/": {
+    "title": "Tempo Community Academy | Art, Cooking, Dance and Computer Science Classes in Bayside, NY",
+    "description": "Personalized enrichment classes in Bayside, Queens. Art, cooking and baking, dance, makeup, barista skills, and computer science in small groups and 1:1 sessions."
+  },
+  "/courses": {
+    "title": "Courses",
+    "description": "Six hands-on programs in Bayside, Queens: Art and Design, Cooking and Baking, Dance and Body Form, Computer Science, Cafe skills, and Makeup and Beauty."
+  },
+  "/pricing": {
+    "title": "Pricing",
+    "description": "Class pricing at Tempo Community Academy in Bayside, Queens: computer science, art, cooking, dance, cafe skills, and makeup, in group and 1:1 formats."
+  },
+  "/about": {
+    "title": "About Us",
+    "description": "Meet the Tempo Community Academy team: licensed NYS teachers and certified specialists offering personalized enrichment programs in Bayside, Queens."
+  },
+  "/gallery": {
+    "title": "Gallery",
+    "description": "Photos from classes and events at Tempo Community Academy in Bayside, Queens."
+  },
+  "/contact": {
+    "title": "Contact",
+    "description": "Contact Tempo Community Academy in Bayside, Queens by phone, email, or the form. By appointment only. English, Korean, and Spanish spoken."
+  },
+  "/privacy": {
+    "title": "Privacy Policy",
+    "description": "How Tempo Community Academy collects and uses information submitted through this website."
+  },
+  "/accessibility": {
+    "title": "Accessibility Statement",
+    "description": "Tempo Community Academy's commitment to an accessible website for all visitors."
+  },
+  "/thanks": {
+    "title": "Thank You",
+    "description": "Your message to Tempo Community Academy was sent. We reply within one business day.",
+    "noindex": true
+  },
+  "/404": {
+    "title": "Page Not Found",
+    "description": "The page you were looking for does not exist. Find your way back to Tempo Community Academy.",
+    "noindex": true
+  }
+}

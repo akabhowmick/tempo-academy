@@ -1,14 +1,10 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { useSeo } from "@/lib/useSeo";
+import routeMeta from "@/lib/route-meta.json";
 
 export default function NotFound() {
-  useSeo({
-    title: "Page Not Found",
-    description: "The page you were looking for does not exist. Find your way back to Tempo Community Academy.",
-    path: "/404",
-    noindex: true,
-  });
+  useSeo({ path: "/404", ...routeMeta["/404"] });
 
   return (
     <Layout>

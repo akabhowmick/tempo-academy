@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { useSeo } from "@/lib/useSeo";
+import routeMeta from "@/lib/route-meta.json";
 
 const TILES: [string, string, string][] = [
   ["ph-1", "Placeholder: art class photo", "Art & Design"],
@@ -15,11 +16,7 @@ const TILES: [string, string, string][] = [
 ];
 
 export default function Gallery() {
-  useSeo({
-    title: "Gallery",
-    description: "Photos from classes and events at Tempo Community Academy in Bayside, Queens.",
-    path: "/gallery",
-  });
+  useSeo({ path: "/gallery", ...routeMeta["/gallery"] });
 
   return (
     <Layout>

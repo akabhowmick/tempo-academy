@@ -1,14 +1,10 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { useSeo } from "@/lib/useSeo";
+import routeMeta from "@/lib/route-meta.json";
 
 export default function Thanks() {
-  useSeo({
-    title: "Thank You",
-    description: "Your message to Tempo Community Academy was sent. We reply within one business day.",
-    path: "/thanks",
-    noindex: true,
-  });
+  useSeo({ path: "/thanks", ...routeMeta["/thanks"] });
 
   return (
     <Layout>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { useSeo } from "@/lib/useSeo";
+import routeMeta from "@/lib/route-meta.json";
 
 const CARDS: { title: string; rows: [string, string][] }[] = [
   { title: "Computer Science", rows: [["Beginner small group, 60 min", "$80"], ["Advanced small group, 60 min", "$100"], ["1:1 private session, 60 min", "$120"], ["1:1 private session, 90 min", "$150"]] },
@@ -12,11 +13,7 @@ const CARDS: { title: string; rows: [string, string][] }[] = [
 ];
 
 export default function Pricing() {
-  useSeo({
-    title: "Pricing",
-    description: "Class pricing at Tempo Community Academy in Bayside, Queens: computer science, art, cooking, dance, cafe skills, and makeup, in group and 1:1 formats.",
-    path: "/pricing",
-  });
+  useSeo({ path: "/pricing", ...routeMeta["/pricing"] });
 
   return (
     <Layout>

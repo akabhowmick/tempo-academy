@@ -1,12 +1,9 @@
 import Layout from "@/components/Layout";
 import { useSeo } from "@/lib/useSeo";
+import routeMeta from "@/lib/route-meta.json";
 
 export default function Privacy() {
-  useSeo({
-    title: "Privacy Policy",
-    description: "How Tempo Community Academy collects and uses information submitted through this website.",
-    path: "/privacy",
-  });
+  useSeo({ path: "/privacy", ...routeMeta["/privacy"] });
 
   return (
     <Layout>
@@ -25,8 +22,7 @@ export default function Privacy() {
           <h2>What we do not do</h2>
           <p>We do not sell your personal information. We do not use your contact details for marketing without your permission.</p>
           <h2>Analytics</h2>
-          {/* TODO: name the analytics tool once installed, add a cookie notice if it sets non-essential cookies. */}
-          <p>If we use website analytics, they measure page visits in aggregate to help us improve the site. Analytics do not identify you personally.</p>
+          <p>We use Plausible Analytics to measure page visits in aggregate. Plausible does not use cookies and does not collect or store any personal data, so no cookie consent banner is needed for it. You can read more at <a href="https://plausible.io/data-policy">plausible.io/data-policy</a>.</p>
           <h2>Third-party services</h2>
           <p>Our contact form is delivered by a form-processing service, and our site is served by a hosting provider. These services process your submission on our behalf. The map on the contact page is embedded from Google Maps, which may set its own cookies when loaded.</p>
           <h2>Your choices</h2>

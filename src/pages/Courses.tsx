@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { useSeo } from "@/lib/useSeo";
+import routeMeta from "@/lib/route-meta.json";
 
 export default function Courses() {
-  useSeo({
-    title: "Courses",
-    description: "Six hands-on programs in Bayside, Queens: Art and Design, Cooking and Baking, Dance and Body Form, Computer Science, Cafe skills, and Makeup and Beauty.",
-    path: "/courses",
-  });
+  useSeo({ path: "/courses", ...routeMeta["/courses"] });
 
   return (
     <Layout>

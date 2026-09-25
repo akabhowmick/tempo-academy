@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { useSeo } from "@/lib/useSeo";
+import routeMeta from "@/lib/route-meta.json";
 
 const PROGRAMS = [
   { img: "ph-1", title: "Art & Design", desc: "Drawing, painting, sculpture, and crafting, from beginner 1:1 instruction to advanced group projects.", href: "/courses#art", alt: "Placeholder: students painting in an art class" },
@@ -11,40 +12,11 @@ const PROGRAMS = [
   { img: "ph-6", title: "Makeup & Beauty", desc: "Skincare and step-by-step makeup for everyday looks and special occasions.", href: "/courses#beauty", alt: "Placeholder: a makeup and beauty lesson" },
 ];
 
-const JSON_LD = {
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "EducationalOrganization"],
-  name: "Tempo Community Academy",
-  url: "https://www.tempocommunityacademy.com/",
-  image: "https://www.tempocommunityacademy.com/assets/og.png",
-  email: "contacttempoacademy@gmail.com",
-  telephone: "+19175829560",
-  priceRange: "$$",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "214-22 42nd Ave",
-    addressLocality: "Bayside",
-    addressRegion: "NY",
-    postalCode: "11361",
-    addressCountry: "US",
-  },
-  openingHoursSpecification: [
-    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "10:00", closes: "18:00" },
-    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "12:00", closes: "18:00" },
-  ],
-};
-
 export default function Home() {
-  useSeo({
-    title: "Tempo Community Academy | Art, Cooking, Dance and Computer Science Classes in Bayside, NY",
-    description: "Personalized enrichment classes in Bayside, Queens. Art, cooking and baking, dance, makeup, barista skills, and computer science in small groups and 1:1 sessions.",
-    path: "/",
-  });
+  useSeo({ path: "/", ...routeMeta["/"] });
 
   return (
     <Layout>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
-
       <section className="hero">
         <div className="wrap hero-grid">
           <div className="hero-copy">

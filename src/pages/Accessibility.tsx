@@ -1,12 +1,9 @@
 import Layout from "@/components/Layout";
 import { useSeo } from "@/lib/useSeo";
+import routeMeta from "@/lib/route-meta.json";
 
 export default function Accessibility() {
-  useSeo({
-    title: "Accessibility Statement",
-    description: "Tempo Community Academy's commitment to an accessible website for all visitors.",
-    path: "/accessibility",
-  });
+  useSeo({ path: "/accessibility", ...routeMeta["/accessibility"] });
 
   return (
     <Layout>

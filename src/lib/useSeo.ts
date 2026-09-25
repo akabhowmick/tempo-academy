@@ -31,10 +31,11 @@ function setCanonical(href: string) {
 
 /**
  * Sets document title and meta tags on route change.
- * This is a client-rendered SPA (Vite), so these tags update after JS runs.
- * If a crawler needs tags present in the initial HTML (some social-preview
- * bots do), prerender the build (e.g. vite-plugin-ssr, or a Vercel static
- * export step) before launch. See README.
+ * This is a client-rendered SPA (Vite), so these tags update after JS runs,
+ * which is fine for browsers and for Google. For link-preview bots that only
+ * read the raw HTML (some Slack/iMessage previews), the build is prerendered
+ * per route by scripts/prerender.mjs, which bakes the same values from
+ * src/lib/route-meta.json into static HTML shells. See README.
  */
 export function useSeo({ title, description, path, noindex }: SeoOptions) {
   useEffect(() => {
@@ -44,6 +45,8 @@ export function useSeo({ title, description, path, noindex }: SeoOptions) {
     setMeta("og:title", fullTitle, "property");
     setMeta("og:description", description, "property");
     setMeta("og:url", `${BASE_URL}${path}`, "property");
+    setMeta("twitter:title", fullTitle);
+    setMeta("twitter:description", description);
     setCanonical(`${BASE_URL}${path}`);
     if (noindex) {
       setMeta("robots", "noindex");
