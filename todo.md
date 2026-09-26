@@ -1,16 +1,6 @@
 ## Blockers
 
-- [x] **[code]** Deploying on Netlify, not Vercel. Added `netlify.toml` with:
-  - [x] A redirect rule (`/*` → `/index.html`, status 200) so refreshing
-        `/courses` etc. doesn't 404.
-  - [x] Security headers (CSP, HSTS, X-Content-Type-Options,
-        Referrer-Policy, Permissions-Policy) in a `[[headers]]` block.
-  - [x] `vercel.json` deleted.
 - [ ] **[owner + code]** Contact form is not live.
-  - [x] **[code]** `src/pages/Contact.tsx` now reads the Formspree endpoint
-        from `VITE_FORMSPREE_ID` (see `.env.example`). Until it's set, the
-        form is disabled and shows a phone/email fallback instead of
-        silently posting to a dead endpoint.
   - [ ] **[owner]** Create the Formspree form, set `VITE_FORMSPREE_ID` in
         Netlify's environment variables, then test a real submission from
         an outside email address and confirm it lands in an inbox someone
@@ -25,33 +15,9 @@
 - [ ] **[owner]** Confirm pricing, hours, both phone numbers, and the street
       address with the owners before anything goes live.
 - [ ] **[owner + code]** Pick and install analytics.
-  - [x] **[code]** Plausible (cookieless, no consent banner needed) is
-        wired up in `index.html` and allowed in the CSP. Domain is
-        hardcoded to `tempocommunityacademy.com`.
-        `src/pages/Privacy.tsx` names the tool.
   - [ ] **[owner]** Confirm the Plausible site is registered under that
         exact domain and traffic is showing up in the dashboard.
 - [ ] **[owner]** Wire up uptime monitoring (FreelanceOps).
-
-## Code fixes
-
-- [x] **[code]** Top-level React error boundary added
-      (`src/components/ErrorBoundary.tsx`, wraps `<App />` in
-      `src/main.tsx`) so a component crash shows a friendly fallback
-      instead of a white screen.
-- [x] **[code]** Explicit `twitter:title`, `twitter:description`, and
-      `twitter:image` meta tags added (in `index.html` and mirrored in
-      `src/lib/useSeo.ts` alongside the og: tags).
-- [x] **[code]** Contact form error handling: invalid submit now shows
-      inline error text tied to each field via `aria-describedby`, with
-      focus moved to the first invalid field, instead of relying only on
-      the browser's native `required` bubbles.
-- [x] **[code, decide first]** Prerendering. Decided: static per-route HTML
-      shells, not full SSG. `scripts/prerender.mjs` runs after `vite build`
-      and bakes per-page title/description/OG/twitter/canonical tags (from
-      `src/lib/route-meta.json`) into `dist/<route>/index.html` for every
-      indexed route, so link-preview bots that don't run JS see correct
-      per-page previews. See README "Prerendering".
 
 ## Post-deploy verification
 
@@ -69,18 +35,3 @@
 
 **Lighthouse mobile scores:**
 Performance **_ · Accessibility _** · Best Practices **_ · SEO _**
-
----
-
-## Already verified, no action needed
-
-Icons and OG image at exact correct dimensions (32x32 ico, 180x180 apple
-touch, 192/512 manifest icons, 1200x630 OG with real branding). robots.txt
-and sitemap.xml correct, noindex pages properly excluded. Accessibility
-fundamentals solid: skip link, landmarks, single h1 per page, labeled
-inputs, focus rings, keyboard nav with Escape on mobile menu,
-reduced-motion respected, 44px+ touch targets, alt text throughout.
-Honeypot on the form. Sticky mobile call bar with safe-area padding.
-Consistent NAP across footer, contact page, and LocalBusiness JSON-LD.
-Canonical and OG tags per route. No secrets or .env anywhere in the repo or
-git history. dangerouslySetInnerHTML used only for static JSON-LD.
