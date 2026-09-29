@@ -1,15 +1,3 @@
-# TODO: Launch Punch List
-
-From the Kordane launch checklist sweep, September 13, 2026. Tier 0 + Tier 1
-(brochure / local business). Items marked **[code]** can be done in the repo
-now. Items marked **[owner]** need input or accounts from the Tempo owners.
-Items marked **[deploy]** can only be verified on the live site.
-
-*Updated September 13, 2026: all [code] items below are done. See README.md
-for details (Netlify deploy, CSP hash regeneration, env vars, prerendering).*
-
----
-
 ## Blockers
 
 - [x] **[code]** Deploying on Netlify, not Vercel. Added `netlify.toml` with:
