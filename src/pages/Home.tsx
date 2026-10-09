@@ -4,12 +4,13 @@ import { useSeo } from "@/lib/useSeo";
 import routeMeta from "@/lib/route-meta.json";
 
 const PROGRAMS = [
-  { img: "ph-1", title: "Art & Design", desc: "Drawing, painting, sculpture, and crafting, from beginner 1:1 instruction to advanced group projects.", href: "/courses#art", alt: "Placeholder: students painting in an art class" },
-  { img: "ph-2", title: "Cooking & Baking", desc: "Kitchen skills from chopping and measuring to pasta, soups, cookies, and cake, taught from scratch.", href: "/courses#cooking", alt: "Placeholder: a cooking and baking class in the kitchen" },
-  { img: "ph-3", title: "Dance & Body Form", desc: "Zumba, K-Pop dance, and yoga that build strength, posture, and confidence. No experience needed.", href: "/courses#dance", alt: "Placeholder: a dance and movement class" },
-  { img: "ph-4", title: "Computer Science", desc: "From everyday computer skills to the basics of coding, at beginner and advanced levels.", href: "/courses#cs", alt: "Placeholder: a computer science lesson" },
-  { img: "ph-5", title: "Cafe & More", desc: "Hands-on barista training: espresso, milk steaming, latte art, and cafe etiquette.", href: "/courses#cafe", alt: "Placeholder: a barista pouring latte art in cafe class" },
-  { img: "ph-6", title: "Makeup & Beauty", desc: "Skincare and step-by-step makeup for everyday looks and special occasions.", href: "/courses#beauty", alt: "Placeholder: a makeup and beauty lesson" },
+  { img: "program-art.webp", title: "Art & Design", desc: "Drawing, painting, sculpture, and crafting, from beginner 1:1 instruction to advanced group projects.", href: "/courses#art", alt: "A student painting a bright red and yellow flower still life on canvas" },
+  { img: "program-cooking.webp", title: "Cooking & Baking", desc: "Kitchen skills from chopping and measuring to pasta, soups, cookies, and cake, taught from scratch.", href: "/courses#cooking", alt: "An instructor guiding students as they shape songpyeon rice cakes from bowls of dough" },
+  { img: "program-dance.webp", title: "Dance & Body Form", desc: "Zumba, K-Pop dance, and yoga that build strength, posture, and confidence. No experience needed.", href: "/courses#dance", alt: "An instructor on stage leading two students through a squat in the dance studio" },
+  { img: "program-computer-science.webp", title: "Computer Science", desc: "From everyday computer skills to the basics of coding, at beginner and advanced levels.", href: "/courses#cs", alt: "Students working on laptops around a wooden table in the computer room" },
+  // Cafe and beauty have no photos yet; these are brand-colored "Photo coming soon" stand-ins.
+  { img: "cafe-image.png", title: "Cafe & More", desc: "Hands-on barista training: espresso, milk steaming, latte art, and cafe etiquette.", href: "/courses#cafe", alt: "" },
+  { img: "makeup.png", title: "Makeup & Beauty", desc: "Skincare and step-by-step makeup for everyday looks and special occasions.", href: "/courses#beauty", alt: "" },
 ];
 
 export default function Home() {
@@ -29,16 +30,10 @@ export default function Home() {
             </div>
             <p className="hero-note">By appointment only. Classes offered in English, Korean, and Spanish.</p>
           </div>
-          <div className="hero-art" aria-hidden="true">
-            <svg viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg">
-              <rect x="10" y="160" width="40" height="120" rx="20" fill="#3E7C47" />
-              <rect x="66" y="80" width="40" height="200" rx="20" fill="#EFCB8F" />
-              <rect x="122" y="120" width="40" height="160" rx="20" fill="#2E6B36" />
-              <rect x="178" y="40" width="40" height="240" rx="20" fill="#8FBB8B" />
-              <rect x="234" y="100" width="40" height="180" rx="20" fill="#3E7C47" />
-              <rect x="290" y="140" width="40" height="140" rx="20" fill="#EFCB8F" />
-              <rect x="346" y="70" width="40" height="210" rx="20" fill="#2E6B36" />
-            </svg>
+          <div className="hero-art">
+            {/* Largest above-the-fold image: eager, high priority, preloaded in index.html.
+                Lowercase fetchpriority because React 18 doesn't know the camelCase prop. */}
+            <img src="/assets/hero-community.webp" width={1200} height={900} {...{ fetchpriority: "high" }} alt="Tempo students, families, and staff in green Tempo shirts posing together for a big group photo at a trampoline park outing" />
           </div>
         </div>
       </section>
@@ -75,7 +70,7 @@ export default function Home() {
           <div className="grid-3">
             {PROGRAMS.map((c) => (
               <article className="card" key={c.title}>
-                <img src={`/assets/${c.img}.svg`} width={800} height={600} loading="lazy" alt={c.alt} />
+                <img src={`/assets/${c.img}`} width={1200} height={900} loading="lazy" alt={c.alt} />
                 <div className="card-body">
                   <h3>{c.title}</h3>
                   <p>{c.desc}</p>
@@ -83,26 +78,6 @@ export default function Home() {
                 </div>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section" aria-labelledby="families-h">
-        <div className="wrap">
-          <div className="section-head">
-            <h2 id="families-h">What families say</h2>
-          </div>
-          <div className="grid-2">
-            <figure className="quote">
-              <span className="fpo">Placeholder quote</span>
-              <blockquote>Real testimonial from a Tempo family goes here. Ask the owners for two or three short quotes from parents or learners.</blockquote>
-              <figcaption>Parent name, program</figcaption>
-            </figure>
-            <figure className="quote">
-              <span className="fpo">Placeholder quote</span>
-              <blockquote>Second testimonial goes here. Even an informal text message quote works well once the family gives permission to share it.</blockquote>
-              <figcaption>Parent name, program</figcaption>
-            </figure>
           </div>
         </div>
       </section>
@@ -127,7 +102,7 @@ export default function Home() {
             </details>
             <details>
               <summary>What languages do you speak?</summary>
-              <p>You can reach us in English, Korean (Inae, 917-582-9560), and Spanish (Cesia, 929-810-8648).</p>
+              <p>You can reach us in English, Korean (Inae, 917-582-9560), and Spanish (Cynthia, 929-810-8648).</p>
             </details>
             <details>
               <summary>Where are classes held?</summary>

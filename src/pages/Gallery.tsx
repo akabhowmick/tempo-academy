@@ -4,15 +4,15 @@ import { useSeo } from "@/lib/useSeo";
 import routeMeta from "@/lib/route-meta.json";
 
 const TILES: [string, string, string][] = [
-  ["ph-1", "Placeholder: art class photo", "Art & Design"],
-  ["ph-2", "Placeholder: cooking class photo", "Cooking & Baking"],
-  ["ph-3", "Placeholder: dance class photo", "Dance & Body Form"],
-  ["ph-4", "Placeholder: computer science class photo", "Computer Science"],
-  ["ph-5", "Placeholder: cafe class photo", "Cafe & More"],
-  ["ph-6", "Placeholder: makeup class photo", "Makeup & Beauty"],
-  ["ph-7", "Placeholder: community event photo", "Community events"],
-  ["ph-8", "Placeholder: student project photo", "Student projects"],
-  ["ph-9", "Placeholder: studio photo", "Our studio"],
+  ["gallery-art.webp", "An instructor working beside a student on a Korean ink painting", "Art & Design"],
+  ["gallery-cooking.webp", "A student stir-frying at a portable burner with an instructor helping", "Cooking & Baking"],
+  ["gallery-dance.webp", "Students and an instructor mid-move during a dance class", "Dance & Body Form"],
+  ["gallery-computer-science.webp", "An instructor leaning in to help a student at a laptop", "Computer Science"],
+  ["gallery-baking.webp", "A baking instructor preparing food alongside students at a table", "Baking"],
+  ["gallery-tshirt-design.webp", "An instructor showing a student how to use a heat press to make a custom T-shirt", "T-shirt design"],
+  ["gallery-community-event.webp", "A staff member and a student high-fiving at a trampoline park outing", "Community events"],
+  ["gallery-student-art.webp", "Framed student artwork displayed on easels at an art show", "Student projects"],
+  ["gallery-studio-kitchen.webp", "Students and staff cooking together in the teaching kitchen", "Our studio"],
 ];
 
 export default function Gallery() {
@@ -23,7 +23,7 @@ export default function Gallery() {
       <div className="page-hero">
         <div className="wrap">
           <h1>Gallery</h1>
-          <p>Moments from our classes and community. Photos below are placeholders until the academy&apos;s own photos are added.</p>
+          <p>Moments from our classes and community.</p>
         </div>
       </div>
 
@@ -32,7 +32,7 @@ export default function Gallery() {
           <div className="gallery-grid">
             {TILES.map(([img, alt, caption]) => (
               <figure key={img}>
-                <img src={`/assets/${img}.svg`} width={800} height={600} loading="lazy" alt={alt} />
+                <img src={`/assets/${img}`} width={800} height={800} loading="lazy" alt={alt} />
                 <figcaption>{caption}</figcaption>
               </figure>
             ))}

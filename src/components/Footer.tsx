@@ -17,7 +17,7 @@ export default function Footer() {
               <li>214-22 42nd Ave<br />Bayside, NY 11361</li>
               <li><a href="https://www.google.com/maps/search/?api=1&query=214-22+42nd+Ave+Bayside+NY+11361">Get directions</a></li>
               <li><a href="tel:+19175829560">Inae: 917-582-9560</a> (English &amp; Korean)</li>
-              <li><a href="tel:+19298108648">Cesia: 929-810-8648</a> (English &amp; Spanish)</li>
+              <li><a href="tel:+19298108648">Cynthia: 929-810-8648</a> (English &amp; Spanish)</li>
               <li><a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a></li>
             </ul>
           </div>

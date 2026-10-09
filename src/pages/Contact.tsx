@@ -61,7 +61,7 @@ export default function Contact() {
             <h2>Reach us directly</h2>
             <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.4rem", display: "grid", gap: ".6rem" }}>
               <li><strong>Inae:</strong> <a href="tel:+19175829560">917-582-9560</a> (English &amp; Korean)</li>
-              <li><strong>Cesia:</strong> <a href="tel:+19298108648">929-810-8648</a> (English &amp; Spanish)</li>
+              <li><strong>Cynthia:</strong> <a href="tel:+19298108648">929-810-8648</a> (English &amp; Spanish)</li>
               <li><strong>Email:</strong> <a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a></li>
               <li><strong>Address:</strong> 214-22 42nd Ave, Bayside, NY 11361 (<a href="https://www.google.com/maps/search/?api=1&query=214-22+42nd+Ave+Bayside+NY+11361">get directions</a>)</li>
             </ul>

@@ -57,7 +57,8 @@ node -e "const fs=require('fs'),c=require('crypto');const h=fs.readFileSync('dis
   tags, and canonical URL per route on mount
 - `scripts/prerender.mjs` postbuild step, see "Prerendering" below
 - `src/index.css` all styling, brand tokens in `:root`
-- `public/assets/` icons, OG image, placeholder SVGs
+- `public/assets/` icons, OG image, optimized WebP photos (generated, see
+  "Images" below)
 - `public/robots.txt`, `sitemap.xml`, `site.webmanifest`
 - `netlify.toml` build command, SPA redirect, and security headers
 
@@ -85,13 +86,20 @@ file (`/courses/index.html`) — it falls back to the root SPA shell for
 trailing slash, so `/courses` resolves correctly once deployed; this is a
 `vite preview` quirk, not a build issue.
 
-## Content swap map (when owners deliver material)
-| Placeholder | Replace with |
+## Images
+Raw client photos live in `assets-src/` (gitignored, never committed). Run
+`npm run optimize` (`scripts/optimize-images.mjs`, uses sharp) to regenerate
+the WebP files in `public/assets/`: auto-rotated, resized to 2x their rendered
+size, metadata and GPS stripped. `ASSETS.md` maps each source file to its slot.
+To swap a photo, edit the list in the script, re-run it, and update
+width/height in the component if the output size changed.
+
+## Content still to come
+| Slot | Status |
 | --- | --- |
-| `public/assets/ph-1..9.svg` | Real class/studio photos |
-| `public/assets/avatar.svg` uses | Real headshots |
-| "Placeholder bio" text in `src/pages/About.tsx` | Real bios |
-| "Placeholder quote" figures in `src/pages/Home.tsx` | Real testimonials |
+| `public/assets/cafe-image.png`, `makeup.png` | "Photo coming soon" stand-ins for Cafe & More and Makeup & Beauty. Replace with real photos (add them to the optimize script as WebP) |
+| Headshots in `src/pages/About.tsx` | Eunice Lee and Pognee Kim show an initials badge until photos arrive |
+| Bios in `src/pages/About.tsx` | Inae, Cynthia, Eunice, Pognee, Jin have role only, no bio yet |
 
 ## Booking, when you scope it
 No backend yet, contact form still posts to Formspree. When booking is
@@ -111,7 +119,7 @@ checkable list with more detail.
 1. Create the real Formspree form, set `VITE_FORMSPREE_ID` in Netlify, and
    test delivery from an outside email address.
 2. Confirm pricing, hours, phones, and address with the owners.
-3. Replace placeholder images and bios (see swap map above).
+3. Get the remaining photos and bios (see "Content still to come" above).
 4. Confirm the Plausible domain/site setup matches production.
 5. Add uptime monitoring.
 6. Run Lighthouse mobile on the deployed site and record scores.

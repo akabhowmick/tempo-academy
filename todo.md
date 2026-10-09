@@ -6,12 +6,16 @@
         an outside email address and confirm it lands in an inbox someone
         reads.
 - [ ] **[owner]** Replace placeholder content (see swap map in README):
-  - [ ] `public/assets/ph-1..9.svg` with real class and studio photos
+  - [x] `public/assets/ph-1..9.svg` with real class and studio photos
         (WebP, sized correctly, keep explicit width/height)
-  - [ ] `public/assets/avatar.svg` uses with real headshots
-  - [ ] Placeholder bios in `src/pages/About.tsx`
-  - [ ] Placeholder testimonial quotes in `src/pages/Home.tsx` (get
-        permission from the families first)
+  - [ ] Real photos for Cafe & More and Makeup & Beauty (currently
+        `cafe-image.png` / `makeup.png` stand-ins)
+  - [x] `public/assets/avatar.svg` uses with real headshots
+  - [ ] Headshots for Eunice Lee and Pognee Kim (initials badge for now)
+  - [x] Placeholder bios in `src/pages/About.tsx` (Halle, Cesia, Jasmine)
+  - [ ] Bios for Inae, Cynthia, Eunice, Pognee, Jin
+  - [x] Placeholder testimonial quotes in `src/pages/Home.tsx` (section
+        removed, no testimonials for now)
 - [ ] **[owner]** Confirm pricing, hours, both phone numbers, and the street
       address with the owners before anything goes live.
 - [ ] **[owner + code]** Pick and install analytics.

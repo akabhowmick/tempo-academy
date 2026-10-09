@@ -17,7 +17,7 @@ export default function Courses() {
 
       <section className="section" id="art" aria-labelledby="art-h">
         <div className="wrap grid-2">
-          <img src="/assets/ph-1.svg" width={800} height={600} loading="lazy" alt="Placeholder: art and design class" style={{ borderRadius: 24 }} />
+          <img src="/assets/program-art.webp" width={1200} height={900} loading="lazy" alt="A student painting a bright red and yellow flower still life on canvas" style={{ borderRadius: 24 }} />
           <div>
             <h2 id="art-h">Art &amp; Design</h2>
             <p><strong>Beginner:</strong> Eunice Lee, a licensed NYS teacher. <strong>Advanced:</strong> Pognee Kim, a licensed NYS teacher.</p>
@@ -36,13 +36,13 @@ export default function Courses() {
             <p>Learn to make delicious meals and baked goods from scratch. Students build core kitchen skills like chopping, measuring, mixing, and safely using the oven and other equipment. From pasta and soup to cookies and cake, the goal is comfort and confidence in the kitchen.</p>
             <Link className="btn btn-ghost" to="/pricing">See cooking pricing</Link>
           </div>
-          <img src="/assets/ph-2.svg" width={800} height={600} loading="lazy" alt="Placeholder: cooking and baking class" style={{ borderRadius: 24 }} />
+          <img src="/assets/program-cooking.webp" width={1200} height={900} loading="lazy" alt="An instructor guiding students as they shape songpyeon rice cakes from bowls of dough" style={{ borderRadius: 24 }} />
         </div>
       </section>
 
       <section className="section" id="dance" aria-labelledby="dance-h">
         <div className="wrap grid-2">
-          <img src="/assets/ph-3.svg" width={800} height={600} loading="lazy" alt="Placeholder: dance and body form class" style={{ borderRadius: 24 }} />
+          <img src="/assets/program-dance.webp" width={1200} height={900} loading="lazy" alt="An instructor on stage leading two students through a squat in the dance studio" style={{ borderRadius: 24 }} />
           <div>
             <h2 id="dance-h">Dance &amp; Body Form</h2>
             <p><strong>Instructor:</strong> Halle Kim, a certified Pilates instructor and registered nurse. Zumba, K-Pop dance, and yoga.</p>
@@ -60,13 +60,13 @@ export default function Courses() {
             <p>Understand how computers work and how to use them in everyday life: keyboard and mouse skills, email, safe internet use, and programs like Word and Excel. Then move into how apps and websites are built and the basics of coding, learning the language of computers step by step.</p>
             <Link className="btn btn-ghost" to="/pricing">See computer science pricing</Link>
           </div>
-          <img src="/assets/ph-4.svg" width={800} height={600} loading="lazy" alt="Placeholder: computer science class" style={{ borderRadius: 24 }} />
+          <img src="/assets/program-computer-science.webp" width={1200} height={900} loading="lazy" alt="Students working on laptops around a wooden table in the computer room" style={{ borderRadius: 24 }} />
         </div>
       </section>
 
       <section className="section" id="cafe" aria-labelledby="cafe-h">
         <div className="wrap grid-2">
-          <img src="/assets/ph-5.svg" width={800} height={600} loading="lazy" alt="Placeholder: cafe and barista class" style={{ borderRadius: 24 }} />
+          <img src="/assets/cafe-image.png" width={1200} height={900} loading="lazy" alt="" style={{ borderRadius: 24 }} />
           <div>
             <h2 id="cafe-h">Cafe &amp; More</h2>
             <p>The art and science behind brewing the perfect cup. Hands-on barista training on professional espresso machines and cafe equipment.</p>
@@ -83,7 +83,7 @@ export default function Courses() {
             <p>Skincare fundamentals and step-by-step makeup application, from everyday looks to special occasions. All about feeling confident, having fun, and bringing out your best.</p>
             <Link className="btn btn-ghost" to="/pricing">See beauty pricing</Link>
           </div>
-          <img src="/assets/ph-6.svg" width={800} height={600} loading="lazy" alt="Placeholder: makeup and beauty class" style={{ borderRadius: 24 }} />
+          <img src="/assets/makeup.png" width={1200} height={900} loading="lazy" alt="" style={{ borderRadius: 24 }} />
         </div>
       </section>
 

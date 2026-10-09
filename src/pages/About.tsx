@@ -3,20 +3,54 @@ import Layout from "@/components/Layout";
 import { useSeo } from "@/lib/useSeo";
 import routeMeta from "@/lib/route-meta.json";
 
-const LEADERSHIP = [
-  { name: "Inae Kim", role: "Program Director" },
-  { name: "Cynthia Martinez", role: "Admin Director" },
-  { name: "Lynn Lee", role: "Office Manager" },
+type Person = { name: string; role: string; img?: string; bio?: string };
+
+// Roles and bios follow the owners' "Team Bios" doc. People without a photo
+// yet get an initials badge; people without a bio yet show name and role only.
+const LEADERSHIP: Person[] = [
+  { name: "Inae Kim", role: "Program Director", img: "team-inae-kim.webp" },
+  { name: "Cynthia Martinez", role: "Admin Director", img: "team-cynthia-martinez.webp" },
+  {
+    name: "Cesia Maldonado",
+    role: "Office Manager and Computer Science, Beginner",
+    img: "team-cesia-maldonado.webp",
+    bio: "I'm Cesia Maldonado, and I am the Office Manager and Beginner Computer Class Instructor. I love being part of a welcoming and supportive environment where everyone feels comfortable learning and growing. I help keep our daily operations organized while teaching students the basics of computers and technology in a fun, simple, and engaging way. I enjoy connecting with students, helping them build confidence, and celebrating their progress along the way!",
+  },
 ];
 
-const INSTRUCTORS = [
+const INSTRUCTORS: Person[] = [
   { name: "Eunice Lee", role: "Art & Design, Beginner. Licensed NYS teacher" },
   { name: "Pognee Kim", role: "Art & Design and Computer Science, Advanced. Licensed NYS teacher" },
-  { name: "Cesia Maldonado", role: "Computer Science, Beginner" },
-  { name: "Jin Park", role: "Cooking & Baking" },
-  { name: "Jasmine Rodriguez", role: "Cooking & Baking" },
-  { name: "Halle Kim", role: "Dance & Body Form. Certified Pilates instructor, registered nurse" },
+  { name: "Jin Park", role: "Cooking & Baking", img: "team-jin-park.webp" },
+  {
+    name: "Jasmine Rodriguez",
+    role: "Cooking & Baking",
+    img: "team-jasmine-rodriguez.webp",
+    bio: "I lead hands-on baking classes where I get to share my love of baking with people of all ages and abilities. Each class gives individuals the opportunity to learn new recipes they can make at home and try new foods. My goal is to create a fun and welcoming environment where everyone can participate, have fun and enjoy things they can make on their own.",
+  },
+  {
+    name: "Halle Kim",
+    role: "Dance & Body Form. Certified Pilates instructor, registered nurse",
+    img: "team-halle-kim.webp",
+    bio: "I'm a BASI Pilates–certified instructor and registered nurse who believes everyone can benefit from movement. My goal is to create a welcoming and supportive environment where each person can build strength, confidence, and body awareness at their own pace.",
+  },
 ];
+
+function PersonCard({ p }: { p: Person }) {
+  const initials = p.name.split(" ").map((w) => w[0]).join("");
+  return (
+    <div className="person">
+      {p.img ? (
+        <img src={`/assets/${p.img}`} width={600} height={600} loading="lazy" alt={`Portrait of ${p.name}`} />
+      ) : (
+        <span className="initials" aria-hidden="true">{initials}</span>
+      )}
+      <h3>{p.name}</h3>
+      <p className="role">{p.role}</p>
+      {p.bio && <p>{p.bio}</p>}
+    </div>
+  );
+}
 
 export default function About() {
   useSeo({ path: "/about", ...routeMeta["/about"] });
@@ -44,14 +78,7 @@ export default function About() {
             <h2 id="leadership-h">Leadership</h2>
           </div>
           <div className="grid-3">
-            {LEADERSHIP.map((p) => (
-              <div className="person" key={p.name}>
-                <img src="/assets/avatar.svg" width={96} height={96} loading="lazy" alt={`Placeholder headshot of ${p.name}`} />
-                <h3>{p.name}</h3>
-                <p className="role">{p.role}</p>
-                <p>Placeholder bio. One or two sentences about {p.name.split(" ")[0]}&apos;s background and role, provided by the owners.</p>
-              </div>
-            ))}
+            {LEADERSHIP.map((p) => <PersonCard p={p} key={p.name} />)}
           </div>
         </div>
       </section>
@@ -63,14 +90,7 @@ export default function About() {
             <p>Our team includes licensed NYS teachers and certified specialists across every program.</p>
           </div>
           <div className="grid-3">
-            {INSTRUCTORS.map((p) => (
-              <div className="person" key={p.name}>
-                <img src="/assets/avatar.svg" width={96} height={96} loading="lazy" alt={`Placeholder headshot of ${p.name}`} />
-                <h3>{p.name}</h3>
-                <p className="role">{p.role}</p>
-                <p>Placeholder bio to be provided by the owners.</p>
-              </div>
-            ))}
+            {INSTRUCTORS.map((p) => <PersonCard p={p} key={p.name} />)}
           </div>
         </div>
       </section>

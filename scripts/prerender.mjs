@@ -68,6 +68,8 @@ function main() {
     html = upsertMeta(html, "name", "twitter:title", fullTitle);
     html = upsertMeta(html, "name", "twitter:description", meta.description);
     html = upsertCanonical(html, url);
+    // The hero image preload in index.html is only useful on the homepage.
+    if (path !== "/") html = html.replace(/<link rel="preload" as="image"[^>]*>\n?/, "");
 
     const outPath = path === "/" ? indexPath : join(DIST, path.replace(/^\//, ""), "index.html");
     mkdirSync(dirname(outPath), { recursive: true });
