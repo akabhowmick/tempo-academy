@@ -96,6 +96,6 @@ photos". Sources and focal points are in `scripts/optimize-images.mjs`.
 
 ## Still missing
 
-- **Headshots**: Eunice Lee and Jin Park (they show an initials badge).
+- **Headshots**: Eunice Lee and Jin Bok (they show an initials badge).
 - **Bios**: Eunice Lee. Everyone else has a bio page at `/about/<name>`.
 - **Vector logo**: only PNG/ICO icons were supplied, so there's no `favicon.svg`.

@@ -10,9 +10,10 @@
         (WebP, sized correctly, keep explicit width/height)
   - [x] Photos for Cafe & More and Makeup & Beauty
   - [x] `public/assets/avatar.svg` uses with real headshots
-  - [ ] Headshots for Eunice Lee and Pognee Kim (initials badge for now)
+  - [ ] Headshots for Eunice Lee and Jin Bok (initials badge for now)
   - [x] Placeholder bios in `src/pages/About.tsx` (Halle, Cesia, Jasmine)
-  - [ ] Bios for Inae, Cynthia, Eunice, Pognee, Jin
+  - [x] Bios for Inae, Cynthia, Pognee, Jin (each has an /about/<name> page)
+  - [ ] Bio for Eunice Lee (if she's still teaching)
   - [x] Placeholder testimonial quotes in `src/pages/Home.tsx` (section
         removed, no testimonials for now)
 - [x] **[owner]** Confirm pricing, hours, both phone numbers, and the street

@@ -71,8 +71,8 @@ export const INSTRUCTORS: Person[] = [
     ],
   },
   {
-    slug: "jin-park",
-    name: "Jin Park",
+    slug: "jin-bok",
+    name: "Jin Bok",
     role: "Cooking & Baking",
     teaser: "Chef Jin holds professional certifications in Korean and Chinese cuisine from her culinary career in South Korea.",
     bio: [

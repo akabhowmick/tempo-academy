@@ -100,8 +100,8 @@ in the component if the output size changed.
 ## Content still to come
 | Slot | Status |
 | --- | --- |
-| Headshots in `src/pages/About.tsx` | Eunice Lee and Pognee Kim show an initials badge until photos arrive |
-| Bios in `src/pages/About.tsx` | Inae, Cynthia, Eunice, Pognee, Jin have role only, no bio yet |
+| Headshots in `src/lib/team.ts` | Eunice Lee and Jin Bok show an initials badge until photos arrive |
+| Team in `src/lib/team.ts` | Eunice has no bio yet. Each bio gets its own `/about/<slug>` page (also add it to `route-meta.json` and `sitemap.xml`) |
 
 ## Booking, when you scope it
 No backend yet, contact form still posts to Formspree. When booking is
