@@ -17,6 +17,9 @@ PDFs, no testimonials.
 | `Class photos/Cooking/SongPyeonRiceCake/IMG_7192.jpg` | Instructor in green TCA shirt guiding students shaping songpyeon rice cakes at a table of mixing bowls | Cooking card (`Home.tsx`) + Cooking section (`Courses.tsx`) | `program-cooking.webp` |
 | `Class photos/Dance&BodyForm/IMG_1584.jpeg` | Instructor on stage leading two students in a squat/movement exercise in the dance room | Dance card (`Home.tsx`) + Dance section (`Courses.tsx`) | `program-dance.webp` |
 | `Class photos/Computer /IMG_6967.jpeg` | Students working on laptops around a wooden table, instructor at the head of the table. Landscape | CS card (`Home.tsx`) + CS section (`Courses.tsx`) | `program-computer-science.webp` |
+| `Class photos/cafe-image.png` | Stock-style shot: pour-over coffee brewing beside a hand grinder (620×496, supplied later) | Cafe card (`Home.tsx`) + Cafe section (`Courses.tsx`) | `program-cafe.webp` |
+| `Class photos/makeup.png` | Stock-style shot: open makeup kit with palettes and brushes (616×482, supplied later) | Makeup card (`Home.tsx`) + Beauty section (`Courses.tsx`) | `program-makeup.webp` |
+| Uploaded favicon pack (rainbow tree TEMPO logo; the upload folder was deleted after copying) | Logo icons | `favicon.ico`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`; the 512 icon is also the source for `og.png` and the header logo (`logo.webp`, white keyed out) | as listed |
 | `Class photos/Art - Fine Art/IMG_6037.jpeg` | Instructor beside a student doing Korean ink painting at a long table | Gallery tile "Art & Design" (`Gallery.tsx`) | `gallery-art.webp` |
 | `Class photos/Cooking/IMG_6229.jpeg` | Student stir-frying at a portable burner with the instructor helping | Gallery tile "Cooking & Baking" | `gallery-cooking.webp` |
 | `Class photos/Dance&BodyForm/IMG_4417.JPG` | Students and instructor mid-dance-move in the dance room | Gallery tile "Dance & Body Form" | `gallery-dance.webp` |
@@ -35,7 +38,21 @@ PDFs, no testimonials.
 | `TCA team members/Headshots of insturctors/Team Bios_.docx` | Bios for Halle, Cesia, Jasmine. Pognee and Jin are headings with no text | Bio text for Halle, Cesia, Jasmine (`About.tsx`) | n/a (text) |
 
 Sizes: hero 1200×900 (renders in the right column at about 520px), program cards 1200×900, gallery tiles 800×800,
-headshots 600×600. All are center/attention-cropped from the source.
+headshots 600×600. Crops are centered on the people in each photo via per-image focal points
+in `scripts/optimize-images.mjs`. Cafe and makeup stay at their native ~620px.
+
+## FAQ
+
+`TCA Frequently Asked Questions.docx` is the full `/faq` page (`src/pages/Faq.tsx`).
+The "register through our website" answer was changed to call/email/contact
+page, since the site has no online registration. Home keeps a 3-question
+teaser linking to it.
+
+## Gallery "See more"
+
+23 more photos, square-cropped to `public/assets/more-*.webp` and listed in
+`MORE` in `Gallery.tsx`. They load only after the visitor taps "See more
+photos". Sources and focal points are in `scripts/optimize-images.mjs`.
 
 ## Unplaced
 
@@ -48,10 +65,6 @@ headshots 600×600. All are center/attention-cropped from the source.
   staff working at laptops).
 - **`Headshots of insturctors/image.jpeg`**: a cartoon chef illustration, probably
   a stand-in for the cooking instructor. Not recommended next to real photos.
-- **`TCA Frequently Asked Questions.docx`**: a long official FAQ (about 30
-  questions). Home already has a 5-question FAQ. It could go on a new /faq page,
-  or I could add a few of its questions to Home. It's not a PDF, so there's
-  nothing for `public/resources/` unless you want it exported as one.
 - **`Cooking/SongPyeonRiceCake/What is Songpyeon.docx`**: a short social-post
   style write-up about the Chuseok songpyeon class. It would make a good gallery
   caption or news blurb, but there's no slot for it today.
@@ -75,14 +88,14 @@ headshots 600×600. All are center/attention-cropped from the source.
 - Bios doc is the source of truth: Cesia is Office Manager plus Beginner
   Computer instructor, so she moved to Leadership and Lynn Lee was removed.
 - The 929-810-8648 English & Spanish line is now listed under Cynthia, not Cesia.
-- Cafe & More and Makeup & Beauty use `cafe-image.png` / `makeup.png`
-  ("Photo coming soon" stand-ins rendered from the old placeholder art).
+- Cafe & More and Makeup & Beauty use the owner-supplied `cafe-image.png` /
+  `makeup.png` (optimized to `program-cafe.webp` / `program-makeup.webp`).
+- Favicons and `og.png` use the uploaded logo. No vector logo, so the old
+  `favicon.svg` was removed.
 - The testimonials section was removed from Home.
 
 ## Still missing
 
-- **Cafe & More and Makeup & Beauty photos**: replace `cafe-image.png` /
-  `makeup.png` when photos arrive.
 - **Headshots**: Eunice Lee and Pognee Kim (they show an initials badge).
 - **Bios**: Inae Kim, Cynthia Martinez, Eunice Lee, Pognee Kim, Jin Park.
-- **Logo**: none in the folder, so favicons and `og.png` are unchanged.
+- **Vector logo**: only PNG/ICO icons were supplied, so there's no `favicon.svg`.

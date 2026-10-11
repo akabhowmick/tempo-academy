@@ -34,7 +34,7 @@ a:hover{color:var(--green-900)}
 .site-header{position:sticky;top:0;background:rgba(253,247,236,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(46,107,54,.15);z-index:50}
 .header-row{display:flex;align-items:center;gap:1rem;min-height:72px}
 .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.12rem;color:var(--green-900)}
-.brand svg{flex:none}
+.brand img{flex:none;width:48px;height:48px}
 .site-nav{margin-left:auto;display:flex;gap:1.4rem;align-items:center}
 .site-nav a{text-decoration:none;font-weight:600;color:var(--ink);padding:.4rem 0;min-height:44px;display:inline-flex;align-items:center}
 .site-nav a:hover{color:var(--green-700)}
@@ -87,7 +87,9 @@ a:hover{color:var(--green-900)}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary::after{content:"+";font-size:1.4rem;color:var(--green-600);font-weight:800}
 .faq details[open] summary::after{content:"\2013"}
-.faq details p{padding-bottom:1rem;color:var(--ink-soft)}
+.faq details p,.faq details ul{margin:0 0 .8rem;color:var(--ink-soft)}
+.faq details>:last-child{margin-bottom:1.9rem}
+.faq-more{margin-top:1.4rem}
 .cta-band{background:var(--green-700);color:#fff;border-radius:var(--r-lg);padding:2.6rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.4rem}
 .cta-band h2{color:#fff;margin:0}
 .cta-band p{color:#E9F2E6;margin:.3rem 0 0}
@@ -102,10 +104,14 @@ a:hover{color:var(--green-900)}
 .person .initials{display:grid;place-items:center;background:var(--green-100);color:var(--green-700);font:800 1.6rem/1 "Bricolage Grotesque",sans-serif}
 .person .role{color:var(--green-700);font-weight:700;font-size:.95rem;margin:0 0 .5rem}
 .person p{color:var(--ink-soft);font-size:.97rem;margin:0}
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media(max-width:720px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
 .gallery-grid figure{margin:0;border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow);background:#fff}
 .gallery-grid img{aspect-ratio:1/1;object-fit:cover;width:100%}
 .gallery-grid figcaption{padding:.7rem 1rem;font-size:.92rem;color:var(--ink-soft)}
+.gallery-grid figure:focus{outline:none}
+.gallery-more{display:flex;justify-content:center;margin-top:2rem}
+.gallery-more .btn{font-family:inherit}
 .form-grid{display:grid;gap:1.1rem}
 label{font-weight:700;display:block;margin-bottom:.35rem}
 input,select,textarea{width:100%;padding:.8rem 1rem;border:1.5px solid rgba(46,107,54,.35);border-radius:12px;font:inherit;background:#fff;color:var(--ink);min-height:48px}

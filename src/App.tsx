@@ -5,6 +5,7 @@ import Courses from "@/pages/Courses";
 import Pricing from "@/pages/Pricing";
 import About from "@/pages/About";
 import Gallery from "@/pages/Gallery";
+import Faq from "@/pages/Faq";
 import Contact from "@/pages/Contact";
 import Thanks from "@/pages/Thanks";
 import Privacy from "@/pages/Privacy";
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/about" element={<About />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/faq" element={<Faq />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/thanks" element={<Thanks />} />
         <Route path="/privacy" element={<Privacy />} />

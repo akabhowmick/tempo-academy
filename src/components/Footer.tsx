@@ -36,6 +36,7 @@ export default function Footer() {
               <li><Link to="/pricing">Pricing</Link></li>
               <li><Link to="/about">About us</Link></li>
               <li><Link to="/gallery">Gallery</Link></li>
+              <li><Link to="/faq">FAQ</Link></li>
               <li><Link to="/contact">Contact</Link></li>
               <li><Link to="/privacy">Privacy policy</Link></li>
               <li><Link to="/accessibility">Accessibility</Link></li>

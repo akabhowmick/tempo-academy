@@ -4,13 +4,12 @@ import { useSeo } from "@/lib/useSeo";
 import routeMeta from "@/lib/route-meta.json";
 
 const PROGRAMS = [
-  { img: "program-art.webp", title: "Art & Design", desc: "Drawing, painting, sculpture, and crafting, from beginner 1:1 instruction to advanced group projects.", href: "/courses#art", alt: "A student painting a bright red and yellow flower still life on canvas" },
-  { img: "program-cooking.webp", title: "Cooking & Baking", desc: "Kitchen skills from chopping and measuring to pasta, soups, cookies, and cake, taught from scratch.", href: "/courses#cooking", alt: "An instructor guiding students as they shape songpyeon rice cakes from bowls of dough" },
-  { img: "program-dance.webp", title: "Dance & Body Form", desc: "Zumba, K-Pop dance, and yoga that build strength, posture, and confidence. No experience needed.", href: "/courses#dance", alt: "An instructor on stage leading two students through a squat in the dance studio" },
-  { img: "program-computer-science.webp", title: "Computer Science", desc: "From everyday computer skills to the basics of coding, at beginner and advanced levels.", href: "/courses#cs", alt: "Students working on laptops around a wooden table in the computer room" },
-  // Cafe and beauty have no photos yet; these are brand-colored "Photo coming soon" stand-ins.
-  { img: "cafe-image.png", title: "Cafe & More", desc: "Hands-on barista training: espresso, milk steaming, latte art, and cafe etiquette.", href: "/courses#cafe", alt: "" },
-  { img: "makeup.png", title: "Makeup & Beauty", desc: "Skincare and step-by-step makeup for everyday looks and special occasions.", href: "/courses#beauty", alt: "" },
+  { img: "program-art.webp", w: 1200, h: 900, title: "Art & Design", desc: "Drawing, painting, sculpture, and crafting, from beginner 1:1 instruction to advanced group projects.", href: "/courses#art", alt: "A student painting a bright red and yellow flower still life on canvas" },
+  { img: "program-cooking.webp", w: 1200, h: 900, title: "Cooking & Baking", desc: "Kitchen skills from chopping and measuring to pasta, soups, cookies, and cake, taught from scratch.", href: "/courses#cooking", alt: "An instructor guiding students as they shape songpyeon rice cakes from bowls of dough" },
+  { img: "program-dance.webp", w: 1200, h: 900, title: "Dance & Body Form", desc: "Zumba, K-Pop dance, and yoga that build strength, posture, and confidence. No experience needed.", href: "/courses#dance", alt: "An instructor on stage leading two students through a squat in the dance studio" },
+  { img: "program-computer-science.webp", w: 1200, h: 900, title: "Computer Science", desc: "From everyday computer skills to the basics of coding, at beginner and advanced levels.", href: "/courses#cs", alt: "Students working on laptops around a wooden table in the computer room" },
+  { img: "program-cafe.webp", w: 620, h: 465, title: "Cafe & More", desc: "Hands-on barista training: espresso, milk steaming, latte art, and cafe etiquette.", href: "/courses#cafe", alt: "Coffee brewing in a pour-over filter beside a hand grinder and potted plants" },
+  { img: "program-makeup.webp", w: 616, h: 462, title: "Makeup & Beauty", desc: "Skincare and step-by-step makeup for everyday looks and special occasions.", href: "/courses#beauty", alt: "An open makeup kit with eyeshadow palettes, brushes, and lipsticks" },
 ];
 
 export default function Home() {
@@ -70,7 +69,7 @@ export default function Home() {
           <div className="grid-3">
             {PROGRAMS.map((c) => (
               <article className="card" key={c.title}>
-                <img src={`/assets/${c.img}`} width={1200} height={900} loading="lazy" alt={c.alt} />
+                <img src={`/assets/${c.img}`} width={c.w} height={c.h} loading="lazy" alt={c.alt} />
                 <div className="card-body">
                   <h3>{c.title}</h3>
                   <p>{c.desc}</p>
@@ -89,10 +88,6 @@ export default function Home() {
           </div>
           <div className="faq">
             <details>
-              <summary>Who are the classes for?</summary>
-              <p>Everyone. Our programs are personalized for each learner&apos;s strengths, interests, and pace, with both small group and 1:1 options. Instructors adjust support and teaching strategies to each person&apos;s needs.</p>
-            </details>
-            <details>
               <summary>Do I need any experience to join?</summary>
               <p>No experience is needed for any of our programs. Beginner and advanced levels are available in art and computer science, and every class starts with the fundamentals.</p>
             </details>
@@ -104,11 +99,8 @@ export default function Home() {
               <summary>What languages do you speak?</summary>
               <p>You can reach us in English, Korean (Inae, 917-582-9560), and Spanish (Cynthia, 929-810-8648).</p>
             </details>
-            <details>
-              <summary>Where are classes held?</summary>
-              <p>At our Bayside location at 214-22 42nd Ave, and directly in community settings so learners can grow in familiar, comfortable environments.</p>
-            </details>
           </div>
+          <p className="faq-more"><Link className="btn btn-ghost" to="/faq">See all questions</Link></p>
         </div>
       </section>
 

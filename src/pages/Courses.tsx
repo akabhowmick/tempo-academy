@@ -66,7 +66,7 @@ export default function Courses() {
 
       <section className="section" id="cafe" aria-labelledby="cafe-h">
         <div className="wrap grid-2">
-          <img src="/assets/cafe-image.png" width={1200} height={900} loading="lazy" alt="" style={{ borderRadius: 24 }} />
+          <img src="/assets/program-cafe.webp" width={620} height={465} loading="lazy" alt="Coffee brewing in a pour-over filter beside a hand grinder and potted plants" style={{ borderRadius: 24 }} />
           <div>
             <h2 id="cafe-h">Cafe &amp; More</h2>
             <p>The art and science behind brewing the perfect cup. Hands-on barista training on professional espresso machines and cafe equipment.</p>
@@ -83,7 +83,7 @@ export default function Courses() {
             <p>Skincare fundamentals and step-by-step makeup application, from everyday looks to special occasions. All about feeling confident, having fun, and bringing out your best.</p>
             <Link className="btn btn-ghost" to="/pricing">See beauty pricing</Link>
           </div>
-          <img src="/assets/makeup.png" width={1200} height={900} loading="lazy" alt="" style={{ borderRadius: 24 }} />
+          <img src="/assets/program-makeup.webp" width={616} height={462} loading="lazy" alt="An open makeup kit with eyeshadow palettes, brushes, and lipsticks" style={{ borderRadius: 24 }} />
         </div>
       </section>
 

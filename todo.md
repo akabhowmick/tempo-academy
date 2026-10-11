@@ -8,8 +8,7 @@
 - [ ] **[owner]** Replace placeholder content (see swap map in README):
   - [x] `public/assets/ph-1..9.svg` with real class and studio photos
         (WebP, sized correctly, keep explicit width/height)
-  - [ ] Real photos for Cafe & More and Makeup & Beauty (currently
-        `cafe-image.png` / `makeup.png` stand-ins)
+  - [x] Photos for Cafe & More and Makeup & Beauty
   - [x] `public/assets/avatar.svg` uses with real headshots
   - [ ] Headshots for Eunice Lee and Pognee Kim (initials badge for now)
   - [x] Placeholder bios in `src/pages/About.tsx` (Halle, Cesia, Jasmine)

@@ -19,6 +19,10 @@
     "title": "Gallery",
     "description": "Photos from classes and events at Tempo Community Academy in Bayside, Queens."
   },
+  "/faq": {
+    "title": "FAQ",
+    "description": "Answers to common questions about Tempo Community Academy: classes, private lessons, enrollment, scheduling, pricing, and languages spoken."
+  },
   "/contact": {
     "title": "Contact",
     "description": "Contact Tempo Community Academy in Bayside, Queens by phone, email, or the form. By appointment only. English, Korean, and Spanish spoken."

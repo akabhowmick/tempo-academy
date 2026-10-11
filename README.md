@@ -46,7 +46,7 @@ node -e "const fs=require('fs'),c=require('crypto');const h=fs.readFileSync('dis
 ## Structure
 - `src/App.tsx` route table
 - `src/pages/` one file per route: Home, Courses, Pricing, About, Gallery,
-  Contact, Thanks, Privacy, Accessibility, NotFound
+  Faq, Contact, Thanks, Privacy, Accessibility, NotFound
 - `src/components/Header.tsx` mobile nav toggle (React state), `Footer.tsx`,
   `CallBar.tsx`, `Layout.tsx` wraps every page, `ErrorBoundary.tsx` top-level
   crash guard (wraps `<App />` in `src/main.tsx`)
@@ -71,7 +71,7 @@ the generic homepage tags on every page.
 
 `scripts/prerender.mjs` runs after `vite build` and writes one static shell
 per indexable route (matching `public/sitemap.xml`: `/`, `/courses`,
-`/pricing`, `/about`, `/gallery`, `/contact`, `/privacy`, `/accessibility`)
+`/pricing`, `/about`, `/gallery`, `/faq`, `/contact`, `/privacy`, `/accessibility`)
 as `dist/<route>/index.html`, with that route's title/description/OG/
 twitter/canonical tags baked in from `src/lib/route-meta.json`. `/thanks`
 and `/404` stay on the plain SPA fallback since both are `noindex`. Every
@@ -91,13 +91,13 @@ Raw client photos live in `assets-src/` (gitignored, never committed). Run
 `npm run optimize` (`scripts/optimize-images.mjs`, uses sharp) to regenerate
 the WebP files in `public/assets/`: auto-rotated, resized to 2x their rendered
 size, metadata and GPS stripped. `ASSETS.md` maps each source file to its slot.
-To swap a photo, edit the list in the script, re-run it, and update
-width/height in the component if the output size changed.
+To swap a photo, edit the list in the script (each entry's `focus` point
+keeps the people centered in the crop), re-run it, and update width/height
+in the component if the output size changed.
 
 ## Content still to come
 | Slot | Status |
 | --- | --- |
-| `public/assets/cafe-image.png`, `makeup.png` | "Photo coming soon" stand-ins for Cafe & More and Makeup & Beauty. Replace with real photos (add them to the optimize script as WebP) |
 | Headshots in `src/pages/About.tsx` | Eunice Lee and Pognee Kim show an initials badge until photos arrive |
 | Bios in `src/pages/About.tsx` | Inae, Cynthia, Eunice, Pognee, Jin have role only, no bio yet |
 
