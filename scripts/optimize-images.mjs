@@ -75,7 +75,7 @@ const IMAGES = [
   ["TCA team members/Headshots of insturctors/Cesia Maldonado.png", "team-cesia-maldonado.webp", HEADSHOT],
   ["TCA team members/Headshots of insturctors/Halle Kim.png", "team-halle-kim.webp", HEADSHOT],
   ["TCA team members/Headshots of insturctors/D1F74B83-4F06-43A2-95A8-6F4AFF005CAB.PNG", "team-jasmine-rodriguez.webp", HEADSHOT],
-  ["TCA team members/Headshots of insturctors/PXL_20231224_170225167.MP.jpg", "team-jin-park.webp", HEADSHOT],
+  ["TCA team members/Headshots of insturctors/PXL_20231224_170225167.MP.jpg", "team-pognee-kim.webp", HEADSHOT],
 ];
 
 /** Largest box with the target aspect ratio, centered on the focus point, clamped to the image. */

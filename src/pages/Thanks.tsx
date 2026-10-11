@@ -11,7 +11,7 @@ export default function Thanks() {
       <section className="section">
         <div className="wrap prose">
           <h1>Thank you!</h1>
-          <p>Your message was sent. We reply within one business day. If it is urgent, call Inae at <a href="tel:+19175829560">917-582-9560</a> (English &amp; Korean) or Cynthia at <a href="tel:+19298108648">929-810-8648</a> (English &amp; Spanish).</p>
+          <p>Your message was sent. We reply within one business day. If it is urgent, email us at <a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a>.</p>
           <p><Link className="btn" to="/">Back to home</Link></p>
         </div>
       </section>

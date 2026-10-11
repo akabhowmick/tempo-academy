@@ -34,7 +34,7 @@ PDFs, no testimonials.
 | `TCA team members/Headshots of insturctors/Cesia Maldonado.png` | Cesia Maldonado, portrait, black blazer | Instructors, Cesia Maldonado (`About.tsx`) | `team-cesia-maldonado.webp` |
 | `TCA team members/Headshots of insturctors/Halle Kim.png` | Halle Kim, portrait, glasses, grey top | Instructors, Halle Kim (`About.tsx`) | `team-halle-kim.webp` |
 | `TCA team members/Headshots of insturctors/D1F74B83-4F06-43A2-95A8-6F4AFF005CAB.PNG` | **Unnamed** headshot: woman with curly hair, black top. Jasmine Rodriguez (confirmed) | Instructors, Jasmine Rodriguez (`About.tsx`) | `team-jasmine-rodriguez.webp` |
-| `TCA team members/Headshots of insturctors/PXL_20231224_170225167.MP.jpg` | **Unnamed** casual phone photo: man, flannel over graphic tee. Jin Park (assumed, please double-check) | Instructors, Jin Park (`About.tsx`) | `team-jin-park.webp` |
+| `TCA team members/Headshots of insturctors/PXL_20231224_170225167.MP.jpg` | Unnamed casual phone photo of a man in a flannel over a graphic tee. Pognee Kim (Jin's bio says "her", Pognee's says "Mr. Kim"); please confirm | Instructors, Pognee Kim (`src/lib/team.ts`) | `team-pognee-kim.webp` |
 | `TCA team members/Headshots of insturctors/Team Bios_.docx` | Bios for Halle, Cesia, Jasmine. Pognee and Jin are headings with no text | Bio text for Halle, Cesia, Jasmine (`About.tsx`) | n/a (text) |
 
 Sizes: hero 1200×900 (renders in the right column at about 520px), program cards 1200×900, gallery tiles 800×800,
@@ -96,6 +96,6 @@ photos". Sources and focal points are in `scripts/optimize-images.mjs`.
 
 ## Still missing
 
-- **Headshots**: Eunice Lee and Pognee Kim (they show an initials badge).
-- **Bios**: Inae Kim, Cynthia Martinez, Eunice Lee, Pognee Kim, Jin Park.
+- **Headshots**: Eunice Lee and Jin Park (they show an initials badge).
+- **Bios**: Eunice Lee. Everyone else has a bio page at `/about/<name>`.
 - **Vector logo**: only PNG/ICO icons were supplied, so there's no `favicon.svg`.

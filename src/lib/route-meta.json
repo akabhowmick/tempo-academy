@@ -15,6 +15,34 @@
     "title": "About Us",
     "description": "Meet the Tempo Community Academy team: licensed NYS teachers and certified specialists offering personalized enrichment programs in Bayside, Queens."
   },
+  "/about/inae-kim": {
+    "title": "Inae Kim, Co-founder & Program Director",
+    "description": "An educator for more than 20 years, Inae Kim co-founded Tempo Community Academy to build a community where learning feels joyful, meaningful, and lifelong."
+  },
+  "/about/cynthia-martinez": {
+    "title": "Cynthia Martinez, Co-founder & Admin Director",
+    "description": "Cynthia Martinez brings more than two decades in education to Tempo Community Academy, where learning prepares people not only for school, but for life."
+  },
+  "/about/cesia-maldonado": {
+    "title": "Cesia Maldonado, Office Manager",
+    "description": "Cesia Maldonado is Tempo Community Academy's Office Manager and Beginner Computer Class instructor."
+  },
+  "/about/pognee-kim": {
+    "title": "Pognee Kim, Art & Computer Science Instructor",
+    "description": "Pognee Kim, a special education teacher with more than 10 years of experience, teaches Computer Animation and T-Shirt Making at Tempo Community Academy."
+  },
+  "/about/jin-park": {
+    "title": "Jin Park, Cooking Instructor",
+    "description": "Chef Jin holds professional certifications in Korean and Chinese cuisine and teaches cooking at Tempo Community Academy."
+  },
+  "/about/jasmine-rodriguez": {
+    "title": "Jasmine Rodriguez, Baking Instructor",
+    "description": "Jasmine Rodriguez leads hands-on baking classes for people of all ages and abilities at Tempo Community Academy."
+  },
+  "/about/halle-kim": {
+    "title": "Halle Kim, Dance & Body Form Instructor",
+    "description": "Halle Kim, a BASI Pilates–certified instructor and registered nurse, teaches Dance & Body Form at Tempo Community Academy."
+  },
   "/gallery": {
     "title": "Gallery",
     "description": "Photos from classes and events at Tempo Community Academy in Bayside, Queens."
@@ -25,7 +53,7 @@
   },
   "/contact": {
     "title": "Contact",
-    "description": "Contact Tempo Community Academy in Bayside, Queens by phone, email, or the form. By appointment only. English, Korean, and Spanish spoken."
+    "description": "Contact Tempo Community Academy in Bayside, Queens by email or the contact form. By appointment only. English, Korean, and Spanish spoken."
   },
   "/privacy": {
     "title": "Privacy Policy",
@@ -34,6 +62,14 @@
   "/accessibility": {
     "title": "Accessibility Statement",
     "description": "Tempo Community Academy's commitment to an accessible website for all visitors."
+  },
+  "/terms": {
+    "title": "Terms of Use",
+    "description": "Terms of use for the Tempo Community Academy website."
+  },
+  "/nondiscrimination": {
+    "title": "Nondiscrimination Statement",
+    "description": "Tempo Community Academy does not discriminate and offers reasonable accommodations and language assistance on request."
   },
   "/thanks": {
     "title": "Thank You",

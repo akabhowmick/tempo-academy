@@ -32,12 +32,12 @@ export default class ErrorBoundary extends Component<Props, State> {
         <div className="error-fallback">
           <div className="wrap">
             <h1>Something went wrong on our end.</h1>
-            <p>Please reload the page. If this keeps happening, call us and we will help directly.</p>
+            <p>Please reload the page. If this keeps happening, email us and we will help directly.</p>
             <div className="error-fallback-actions">
               <button className="btn" type="button" onClick={() => window.location.reload()}>Reload page</button>
               <a className="btn btn-ghost" href="/">Go to homepage</a>
             </div>
-            <p className="price-note">Or call <a href="tel:+19175829560">917-582-9560</a>.</p>
+            <p className="price-note">Or email <a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a>.</p>
           </div>
         </div>
       );

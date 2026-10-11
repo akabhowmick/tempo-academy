@@ -150,7 +150,7 @@ const SECTIONS: { id: string; title: string; items: { q: string; a: ReactNode }[
     items: [
       {
         q: "How do I register for a class?",
-        a: <p>Call or email us, or send a message through our <Link to="/contact">contact page</Link>, and we will set up a time to talk about the right program and schedule. Each program comes with information about availability, scheduling, pricing, and registration requirements.</p>,
+        a: <p>Email us or send a message through our <Link to="/contact">contact page</Link>, and we will set up a time to talk about the right program and schedule. Each program comes with information about availability, scheduling, pricing, and registration requirements.</p>,
       },
       {
         q: "Can I speak with someone before registering?",
@@ -254,11 +254,11 @@ const SECTIONS: { id: string; title: string; items: { q: string; a: ReactNode }[
     items: [
       {
         q: "Can I walk in?",
-        a: <p>We meet by appointment only, no walk-ins. Call or email us and we will set up a time to talk about the right program and schedule.</p>,
+        a: <p>We meet by appointment only, no walk-ins. Email us or send a message through our <Link to="/contact">contact page</Link> and we will set up a time to talk about the right program and schedule.</p>,
       },
       {
         q: "What languages do you speak?",
-        a: <p>You can reach us in English, Korean (Inae, <a href="tel:+19175829560">917-582-9560</a>), and Spanish (Cynthia, <a href="tel:+19298108648">929-810-8648</a>). Classes are offered in English, Korean, and Spanish.</p>,
+        a: <p>You can reach us in English, Korean (Inae), and Spanish (Cynthia). Just let us know your preferred language when you get in touch. Classes are offered in English, Korean, and Spanish.</p>,
       },
       {
         q: "Where are classes held?",

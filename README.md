@@ -29,7 +29,7 @@ Netlify's Site settings → Environment variables for production builds.
 
 | Variable | Purpose |
 | --- | --- |
-| `VITE_FORMSPREE_ID` | Formspree form id for the contact page. Until set, the form on `/contact` is disabled and shows a phone/email fallback instead of posting to a dead endpoint. |
+| `VITE_FORMSPREE_ID` | Formspree form id for the contact page. Until set, the form on `/contact` is disabled and shows an email fallback instead of posting to a dead endpoint. |
 
 ### Content Security Policy
 `netlify.toml` ships a `script-src` with no `'unsafe-inline'`, pinning the
@@ -46,7 +46,8 @@ node -e "const fs=require('fs'),c=require('crypto');const h=fs.readFileSync('dis
 ## Structure
 - `src/App.tsx` route table
 - `src/pages/` one file per route: Home, Courses, Pricing, About, Gallery,
-  Faq, Contact, Thanks, Privacy, Accessibility, NotFound
+  Faq, Contact, Thanks, Privacy, Terms, Nondiscrimination, Accessibility,
+  NotFound
 - `src/components/Header.tsx` mobile nav toggle (React state), `Footer.tsx`,
   `CallBar.tsx`, `Layout.tsx` wraps every page, `ErrorBoundary.tsx` top-level
   crash guard (wraps `<App />` in `src/main.tsx`)
@@ -71,7 +72,8 @@ the generic homepage tags on every page.
 
 `scripts/prerender.mjs` runs after `vite build` and writes one static shell
 per indexable route (matching `public/sitemap.xml`: `/`, `/courses`,
-`/pricing`, `/about`, `/gallery`, `/faq`, `/contact`, `/privacy`, `/accessibility`)
+`/pricing`, `/about`, `/gallery`, `/faq`, `/contact`, `/privacy`, `/terms`, `/nondiscrimination`,
+`/accessibility`)
 as `dist/<route>/index.html`, with that route's title/description/OG/
 twitter/canonical tags baked in from `src/lib/route-meta.json`. `/thanks`
 and `/404` stay on the plain SPA fallback since both are `noindex`. Every
@@ -118,10 +120,11 @@ Owner-blocked or deploy-only items remaining — see `todo.md` for the full,
 checkable list with more detail.
 1. Create the real Formspree form, set `VITE_FORMSPREE_ID` in Netlify, and
    test delivery from an outside email address.
-2. Confirm pricing, hours, phones, and address with the owners.
+2. Pricing, hours, and address are confirmed. Phone numbers are
+   intentionally not published (owners' request): contact is email + form.
 3. Get the remaining photos and bios (see "Content still to come" above).
 4. Confirm the Plausible domain/site setup matches production.
 5. Add uptime monitoring.
 6. Run Lighthouse mobile on the deployed site and record scores.
-7. Verify the Google Business Profile name/address/phone matches the footer.
+7. Verify the Google Business Profile name/address matches the footer.
 8. Smoke test per the Kordane launch checklist.

@@ -15,8 +15,9 @@
   - [ ] Bios for Inae, Cynthia, Eunice, Pognee, Jin
   - [x] Placeholder testimonial quotes in `src/pages/Home.tsx` (section
         removed, no testimonials for now)
-- [ ] **[owner]** Confirm pricing, hours, both phone numbers, and the street
-      address with the owners before anything goes live.
+- [x] **[owner]** Confirm pricing, hours, both phone numbers, and the street
+      address with the owners before anything goes live. (Confirmed in the
+      owners' "TCA website" doc.)
 - [ ] **[owner + code]** Pick and install analytics.
   - [ ] **[owner]** Confirm the Plausible site is registered under that
         exact domain and traffic is showing up in the dashboard.
@@ -29,8 +30,9 @@
 - [ ] **[deploy]** Load at 320px wide, confirm no horizontal scroll.
 - [ ] **[deploy]** Test on a real iPhone in Safari, over cellular.
 - [ ] **[deploy]** Paste the URL into Slack or iMessage, check the OG preview.
-- [ ] **[deploy]** Verify Google Business Profile name, address, and phone
-      match the footer exactly.
+- [ ] **[deploy]** Verify Google Business Profile name and address match the
+      footer exactly. The site no longer lists phone numbers (owners' request),
+      so check whether the profile should show one.
 - [ ] **[deploy]** HTTPS redirect works, one canonical host, the other 301s.
 - [ ] **[deploy]** Hit a nonexistent URL, confirm the custom 404 renders.
 - [ ] **[deploy]** Full 10-minute smoke test from the Kordane launch

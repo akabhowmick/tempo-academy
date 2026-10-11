@@ -2,52 +2,21 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { useSeo } from "@/lib/useSeo";
 import routeMeta from "@/lib/route-meta.json";
-
-type Person = { name: string; role: string; img?: string; bio?: string };
-
-// Roles and bios follow the owners' "Team Bios" doc. People without a photo
-// yet get an initials badge; people without a bio yet show name and role only.
-const LEADERSHIP: Person[] = [
-  { name: "Inae Kim", role: "Program Director", img: "team-inae-kim.webp" },
-  { name: "Cynthia Martinez", role: "Admin Director", img: "team-cynthia-martinez.webp" },
-  {
-    name: "Cesia Maldonado",
-    role: "Office Manager and Computer Science, Beginner",
-    img: "team-cesia-maldonado.webp",
-    bio: "I'm Cesia Maldonado, and I am the Office Manager and Beginner Computer Class Instructor. I love being part of a welcoming and supportive environment where everyone feels comfortable learning and growing. I help keep our daily operations organized while teaching students the basics of computers and technology in a fun, simple, and engaging way. I enjoy connecting with students, helping them build confidence, and celebrating their progress along the way!",
-  },
-];
-
-const INSTRUCTORS: Person[] = [
-  { name: "Eunice Lee", role: "Art & Design, Beginner. Licensed NYS teacher" },
-  { name: "Pognee Kim", role: "Art & Design and Computer Science, Advanced. Licensed NYS teacher" },
-  { name: "Jin Park", role: "Cooking & Baking", img: "team-jin-park.webp" },
-  {
-    name: "Jasmine Rodriguez",
-    role: "Cooking & Baking",
-    img: "team-jasmine-rodriguez.webp",
-    bio: "I lead hands-on baking classes where I get to share my love of baking with people of all ages and abilities. Each class gives individuals the opportunity to learn new recipes they can make at home and try new foods. My goal is to create a fun and welcoming environment where everyone can participate, have fun and enjoy things they can make on their own.",
-  },
-  {
-    name: "Halle Kim",
-    role: "Dance & Body Form. Certified Pilates instructor, registered nurse",
-    img: "team-halle-kim.webp",
-    bio: "I'm a BASI Pilates–certified instructor and registered nurse who believes everyone can benefit from movement. My goal is to create a welcoming and supportive environment where each person can build strength, confidence, and body awareness at their own pace.",
-  },
-];
+import { LEADERSHIP, INSTRUCTORS, firstName, initials, type Person } from "@/lib/team";
 
 function PersonCard({ p }: { p: Person }) {
-  const initials = p.name.split(" ").map((w) => w[0]).join("");
   return (
     <div className="person">
       {p.img ? (
         <img src={`/assets/${p.img}`} width={600} height={600} loading="lazy" alt={`Portrait of ${p.name}`} />
       ) : (
-        <span className="initials" aria-hidden="true">{initials}</span>
+        <span className="initials" aria-hidden="true">{initials(p)}</span>
       )}
       <h3>{p.name}</h3>
+      {p.credentials && <p className="creds">{p.credentials}</p>}
       <p className="role">{p.role}</p>
-      {p.bio && <p>{p.bio}</p>}
+      {p.teaser && <p>{p.teaser}</p>}
+      {p.bio && <Link className="card-link" to={`/about/${p.slug}`}>Read {firstName(p)}&apos;s bio</Link>}
     </div>
   );
 }

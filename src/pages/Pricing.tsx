@@ -50,7 +50,7 @@ export default function Pricing() {
           <div className="cta-band">
             <div>
               <h2>Questions about pricing?</h2>
-              <p>We are happy to walk you through options by phone or email.</p>
+              <p>We are happy to walk you through options by email.</p>
             </div>
             <Link className="btn btn-light" to="/contact">Contact us</Link>
           </div>
