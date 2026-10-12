@@ -2,16 +2,17 @@
   command = "npm run build"
   publish = "dist"
 
-# SPA fallback for client-side routing. Netlify resolves real files first
-# (including the prerendered route shells in dist/, see scripts/prerender.mjs),
-# so this only catches paths with no matching file. That means an unknown URL
-# returns HTTP 200 with the app's own not-found page (src/pages/NotFound.tsx,
-# which is noindex) rather than a real 404 status — the standard tradeoff for
-# SPA routing on static hosts.
+# Not-found fallback. Every real route is a prerendered file in dist/
+# (scripts/prerender.mjs writes one per entry in src/lib/route-meta.json,
+# including noindex pages like /thanks), and Netlify serves real files before
+# applying redirects. So this rule only ever matches unknown paths: it serves
+# the app shell with a true 404 status, and the app renders its NotFound page
+# (src/pages/NotFound.tsx, noindex). If you add a route, add it to
+# route-meta.json too, or it will 404 in production.
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200
+  status = 404
 
 [[headers]]
   for = "/*"
@@ -30,8 +31,10 @@
     #   attributes (Courses, Pricing, Contact), and inline style attributes
     #   require it regardless of how they're generated.
     # - frame-src allows the Google Maps embed on /contact.
-    # - form-action allows the Formspree contact form target.
+    # - form-action allows the FormSubmit contact form target
+    #   (https://formsubmit.co). After a submission FormSubmit redirects back
+    #   to /thanks on this site, which 'self' covers.
     # - connect-src/script-src allow Plausible (plausible.io). Swapping to
     #   Fathom instead? Replace both plausible.io entries with
     #   cdn.usefathom.com.
-    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-src https://www.google.com; form-action 'self' https://formspree.io; script-src 'self' 'sha256-nvW0quiRbCitCDsrjZCDzceSrkedYFjqZQJ7MaDIfoQ=' https://plausible.io; connect-src 'self' https://plausible.io; upgrade-insecure-requests"
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-src https://www.google.com; form-action 'self' https://formsubmit.co; script-src 'self' 'sha256-nvW0quiRbCitCDsrjZCDzceSrkedYFjqZQJ7MaDIfoQ=' https://plausible.io; connect-src 'self' https://plausible.io; upgrade-insecure-requests"

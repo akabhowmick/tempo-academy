@@ -29,7 +29,20 @@ Netlify's Site settings → Environment variables for production builds.
 
 | Variable | Purpose |
 | --- | --- |
-| `VITE_FORMSPREE_ID` | Formspree form id for the contact page. Until set, the form on `/contact` is disabled and shows an email fallback instead of posting to a dead endpoint. |
+| `VITE_FORMSUBMIT_ID` | [FormSubmit](https://formsubmit.co) endpoint for the contact form, which posts to `https://formsubmit.co/<value>`. Use the inbox email address only for the one-time activation, then the random-string ID (see below). Until set, the form on `/contact` is disabled and shows an email fallback instead of posting to a dead endpoint. |
+
+#### Activating the contact form (FormSubmit)
+1. Set `VITE_FORMSUBMIT_ID` to the inbox address (`contacttempoacademy@gmail.com`)
+   in Netlify, deploy, and submit the form once.
+2. FormSubmit emails that inbox an activation link. Click it.
+3. FormSubmit then gives a random-string ID for the form. Replace the email
+   address in `VITE_FORMSUBMIT_ID` with that ID and redeploy, so the address
+   isn't exposed in the page source.
+
+The form is a plain POST (no JS fetch). Hidden fields set the redirect back to
+`/thanks` (`_next`), turn off FormSubmit's captcha page (`_captcha`; the
+`_honey` honeypot field catches bots instead), use the table email layout
+(`_template`), and set the email subject (`_subject`).
 
 ### Content Security Policy
 `netlify.toml` ships a `script-src` with no `'unsafe-inline'`, pinning the
@@ -71,14 +84,21 @@ link-preview bots (Slack, iMessage) only read the raw HTML and would show
 the generic homepage tags on every page.
 
 `scripts/prerender.mjs` runs after `vite build` and writes one static shell
-per indexable route (matching `public/sitemap.xml`: `/`, `/courses`,
-`/pricing`, `/about`, `/gallery`, `/faq`, `/contact`, `/privacy`, `/terms`, `/nondiscrimination`,
-`/accessibility`)
-as `dist/<route>/index.html`, with that route's title/description/OG/
-twitter/canonical tags baked in from `src/lib/route-meta.json`. `/thanks`
-and `/404` stay on the plain SPA fallback since both are `noindex`. Every
-shell loads the same JS bundle, so the app behaves identically for browsers;
-this only changes what a bot sees before JS runs.
+per route in `src/lib/route-meta.json` as `dist/<route>/index.html`, with that
+route's title/description/OG/twitter/canonical tags baked in. That includes
+each team bio page (`/about/<slug>`) and noindex pages like `/thanks`, which
+also get `<meta name="robots" content="noindex">`. Only indexable routes are
+listed in `public/sitemap.xml`. Every shell loads the same JS bundle, so the
+app behaves identically for browsers; this only changes what a bot sees
+before JS runs.
+
+### Real 404s
+`netlify.toml`'s catch-all (`/*` → `/index.html`) uses status 404. Real files
+win over redirects on Netlify, so it only matches unknown paths, which get a
+true 404 status while the app renders its NotFound page. The `/404` entry in
+`route-meta.json` is that page's metadata, not a route, so it isn't
+prerendered. **Any new route must be added to `route-meta.json`** (and to the
+sitemap if indexable), or it will be served as a 404 in production.
 
 Note: `npm run preview` (Vite's own static server) only resolves these
 per-route files for a path with a trailing slash (`/courses/`) or the exact
@@ -104,7 +124,7 @@ in the component if the output size changed.
 | Team in `src/lib/team.ts` | Eunice has no bio yet. Each bio gets its own `/about/<slug>` page (also add it to `route-meta.json` and `sitemap.xml`) |
 
 ## Booking, when you scope it
-No backend yet, contact form still posts to Formspree. When booking is
+No backend yet, contact form still posts to FormSubmit. When booking is
 ready: add Supabase for availability/appointments and an API layer (Netlify
 Functions work fine alongside a Vite SPA), then swap the contact form's
 program-select block for a real slot picker.
@@ -118,8 +138,8 @@ production domain changes.
 ## TODO before launch
 Owner-blocked or deploy-only items remaining — see `todo.md` for the full,
 checkable list with more detail.
-1. Create the real Formspree form, set `VITE_FORMSPREE_ID` in Netlify, and
-   test delivery from an outside email address.
+1. Activate FormSubmit (see "Activating the contact form" above), swap in
+   the random-string ID, and test delivery from an outside email address.
 2. Pricing, hours, and address are confirmed. Phone numbers are
    intentionally not published (owners' request): contact is email + form.
 3. Get the remaining photos and bios (see "Content still to come" above).

@@ -1,13 +1,15 @@
 import { FormEvent, useState } from "react";
+import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { useSeo } from "@/lib/useSeo";
 import routeMeta from "@/lib/route-meta.json";
 
-// Set at build time (see .env.example). Until the owners create a Formspree
-// form and this is set, the form is disabled and visitors are pointed to
-// email instead of silently posting to a dead endpoint.
-const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID;
-const FORM_ACTION = FORMSPREE_ID ? `https://formspree.io/f/${FORMSPREE_ID}` : undefined;
+// Set at build time (see .env.example): FormSubmit's random-string endpoint
+// ID, or the inbox email address for the one-time activation submit. Until
+// it's set, the form is disabled and visitors are pointed to email instead of
+// silently posting to a dead endpoint.
+const FORMSUBMIT_ID = import.meta.env.VITE_FORMSUBMIT_ID;
+const FORM_ACTION = FORMSUBMIT_ID ? `https://formsubmit.co/${FORMSUBMIT_ID}` : undefined;
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -139,11 +141,15 @@ export default function Contact() {
                 />
                 {errors.message && <p className="field-error" id="message-error">{errors.message}</p>}
               </div>
-              <label className="hp" htmlFor="_gotcha" aria-hidden="true" tabIndex={-1}>Leave this field empty</label>
-              <input className="hp" type="text" id="_gotcha" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+              {/* FormSubmit honeypot: real visitors never see or fill it, so a value means a bot. */}
+              <label className="hp" htmlFor="_honey" aria-hidden="true" tabIndex={-1}>Leave this field empty</label>
+              <input className="hp" type="text" id="_honey" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" />
               <input type="hidden" name="_next" value="https://www.tempocommunityacademy.com/thanks" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_subject" value="New inquiry from tempocommunityacademy.com" />
               <button className="btn" type="submit" disabled={!FORM_ACTION}>Send message</button>
-              <p className="price-note">We reply within one business day. Your details are only used to respond to your inquiry. See our <a href="/privacy">privacy policy</a>.</p>
+              <p className="price-note">We reply within one business day. Your details are only used to respond to your inquiry. See our <Link to="/privacy">privacy policy</Link>.</p>
             </form>
           </div>
         </div>

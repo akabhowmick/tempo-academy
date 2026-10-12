@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 
 const LINKS = [
@@ -12,6 +12,20 @@ const LINKS = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+
+  // While the mobile menu is open, Escape closes it from anywhere on the page
+  // and returns focus to the Menu button so keyboard users aren't stranded.
+  useEffect(() => {
+    if (!open) return;
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key !== "Escape") return;
+      setOpen(false);
+      toggleRef.current?.focus();
+    }
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open]);
 
   return (
     <>
@@ -23,6 +37,7 @@ export default function Header() {
             <span>Tempo Community Academy</span>
           </Link>
           <button
+            ref={toggleRef}
             className="nav-toggle"
             aria-expanded={open}
             aria-controls="site-nav"
@@ -34,9 +49,6 @@ export default function Header() {
             id="site-nav"
             className={`site-nav${open ? " open" : ""}`}
             aria-label="Main"
-            onKeyDown={(e) => {
-              if (e.key === "Escape") setOpen(false);
-            }}
           >
             {LINKS.map((l) => (
               <NavLink

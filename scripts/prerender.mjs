@@ -7,6 +7,10 @@
 // Route data comes from src/lib/route-meta.json, the same file the page
 // components read via useSeo, so the prerendered tags and the client-set
 // tags cannot drift apart. Run automatically via the "postbuild" npm script.
+//
+// Every real route gets a file, including noindex ones like /thanks (with a
+// robots noindex tag), because netlify.toml's catch-all fallback now answers
+// with a 404 status: any route without a file here would 404 in production.
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -51,9 +55,11 @@ function main() {
   const template = readFileSync(indexPath, "utf8");
 
   const routeMeta = JSON.parse(readFileSync(join(ROOT, "src/lib/route-meta.json"), "utf8"));
-  // Same set of routes as public/sitemap.xml: indexable pages only. /thanks
-  // and /404 are noindex and stay on the plain SPA fallback.
-  const routes = Object.entries(routeMeta).filter(([, meta]) => !meta.noindex);
+  // "/404" is the NotFound page's metadata, not a URL: unknown paths get the
+  // index.html fallback with a 404 status (netlify.toml) and the app renders
+  // NotFound. Everything else is a real route. Noindex routes (e.g. /thanks)
+  // are prerendered too, but stay out of public/sitemap.xml.
+  const routes = Object.entries(routeMeta).filter(([path]) => path !== "/404");
 
   for (const [path, meta] of routes) {
     const fullTitle = path === "/" ? meta.title : `${meta.title} | Tempo Community Academy`;
@@ -68,6 +74,7 @@ function main() {
     html = upsertMeta(html, "name", "twitter:title", fullTitle);
     html = upsertMeta(html, "name", "twitter:description", meta.description);
     html = upsertCanonical(html, url);
+    if (meta.noindex) html = upsertMeta(html, "name", "robots", "noindex");
     // The hero image preload in index.html is only useful on the homepage.
     if (path !== "/") html = html.replace(/<link rel="preload" as="image"[^>]*>\n?/, "");
 

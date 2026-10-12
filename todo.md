@@ -1,10 +1,16 @@
 ## Blockers
 
 - [ ] **[owner + code]** Contact form is not live.
-  - [ ] **[owner]** Create the Formspree form, set `VITE_FORMSPREE_ID` in
-        Netlify's environment variables, then test a real submission from
-        an outside email address and confirm it lands in an inbox someone
-        reads.
+  - [ ] **[owner + code]** Activate FormSubmit: set `VITE_FORMSUBMIT_ID` in
+        Netlify to `contacttempoacademy@gmail.com`, deploy, and submit the
+        form once.
+  - [ ] **[owner]** Click the activation link FormSubmit emails to
+        contacttempoacademy@gmail.com.
+  - [ ] **[code]** Replace the email in `VITE_FORMSUBMIT_ID` with the
+        random-string ID FormSubmit provides, and redeploy.
+  - [ ] **[owner]** Send a real test submission from an outside email
+        address, confirm it lands in an inbox someone reads and the
+        browser ends on /thanks.
 - [ ] **[owner]** Replace placeholder content (see swap map in README):
   - [x] `public/assets/ph-1..9.svg` with real class and studio photos
         (WebP, sized correctly, keep explicit width/height)
@@ -35,7 +41,9 @@
       footer exactly. The site no longer lists phone numbers (owners' request),
       so check whether the profile should show one.
 - [ ] **[deploy]** HTTPS redirect works, one canonical host, the other 301s.
-- [ ] **[deploy]** Hit a nonexistent URL, confirm the custom 404 renders.
+- [ ] **[deploy]** Hit a nonexistent URL, confirm the custom 404 renders
+      and the response status is 404 (devtools Network tab). Also confirm
+      /thanks and an /about/<name> bio page load with status 200.
 - [ ] **[deploy]** Full 10-minute smoke test from the Kordane launch
       checklist.
 

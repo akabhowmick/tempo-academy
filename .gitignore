@@ -5,3 +5,7 @@ dist
 
 # Raw client originals (never commit)
 assets-src/
+
+# OS and build caches
+.DS_Store
+*.tsbuildinfo
