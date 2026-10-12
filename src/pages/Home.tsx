@@ -25,14 +25,14 @@ export default function Home() {
             <p className="lede">Personalized classes in art, cooking and baking, dance, beauty, barista skills, and computer science. Small groups and 1:1 sessions, taught with patience in a space that feels like community.</p>
             <div className="hero-actions">
               <Link className="btn" to="/courses">Explore courses</Link>
-              <a className="btn btn-ghost" href="mailto:contacttempoacademy@gmail.com">Email us</a>
+              <a className="btn btn-ghost" href="tel:+19175829560">Call 917-582-9560</a>
             </div>
             <p className="hero-note">By appointment only. Classes offered in English, Korean, and Spanish.</p>
           </div>
           <div className="hero-art">
             {/* Largest above-the-fold image: eager, high priority, preloaded in index.html.
                 Lowercase fetchpriority because React 18 doesn't know the camelCase prop. */}
-            <img src="/assets/hero-community.webp" width={1200} height={900} {...{ fetchpriority: "high" }} alt="Tempo students, families, and staff in green Tempo shirts posing together for a big group photo at a trampoline park outing" />
+            <img src="/assets/hero-community.webp" width={1200} height={900} {...{ fetchpriority: "high" }} alt="TEMPO students, families, and staff in green TEMPO shirts posing together for a big group photo at a trampoline park outing" />
           </div>
         </div>
       </section>
@@ -46,7 +46,7 @@ export default function Home() {
           <div className="steps">
             <div className="step">
               <h3>Reach out</h3>
-              <p>Email us or send a message to tell us about your learner. We meet by appointment, in the language your family is most comfortable with.</p>
+              <p>Call, email, or send a message to tell us about your learner. We meet by appointment, in the language your family is most comfortable with.</p>
             </div>
             <div className="step">
               <h3>Build a plan</h3>
@@ -93,11 +93,11 @@ export default function Home() {
             </details>
             <details>
               <summary>How do I sign up? Can I walk in?</summary>
-              <p>We meet by appointment only, no walk-ins. Email us or send a message through our contact page and we will set up a time to talk about the right program and schedule.</p>
+              <p>We meet by appointment only, no walk-ins. Call or email us, or send a message through our contact page, and we will set up a time to talk about the right program and schedule.</p>
             </details>
             <details>
               <summary>What languages do you speak?</summary>
-              <p>You can reach us in English, Korean (Inae), and Spanish (Cynthia). Just let us know your preferred language when you get in touch.</p>
+              <p>You can reach us in English, Korean (Inae, 917-582-9560), and Spanish (Cesia, 929-810-8648). Just let us know your preferred language when you get in touch.</p>
             </details>
           </div>
           <p className="faq-more"><Link className="btn btn-ghost" to="/faq">See all questions</Link></p>

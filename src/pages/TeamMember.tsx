@@ -28,7 +28,7 @@ export default function TeamMember() {
       <section className="section">
         <div className="wrap bio-grid">
           {person.img ? (
-            <img className="bio-photo" src={`/assets/${person.img}`} width={600} height={600} alt={`Portrait of ${person.name}`} />
+            <img className="bio-photo" src={`/assets/${person.img}`} width={600} height={600} alt={person.imgAlt ?? `Portrait of ${person.name}`} />
           ) : (
             <span className="bio-photo initials" aria-hidden="true">{initials(person)}</span>
           )}

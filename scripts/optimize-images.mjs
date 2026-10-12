@@ -76,6 +76,8 @@ const IMAGES = [
   ["TCA team members/Headshots of insturctors/Halle Kim.png", "team-halle-kim.webp", HEADSHOT],
   ["TCA team members/Headshots of insturctors/D1F74B83-4F06-43A2-95A8-6F4AFF005CAB.PNG", "team-jasmine-rodriguez.webp", HEADSHOT],
   ["TCA team members/Headshots of insturctors/PXL_20231224_170225167.MP.jpg", "team-pognee-kim.webp", HEADSHOT],
+  // Jin asked to use this chef illustration instead of a headshot.
+  ["TCA team members/Headshots of insturctors/image.jpeg", "team-jin-bok.webp", HEADSHOT],
 ];
 
 /** Largest box with the target aspect ratio, centered on the focus point, clamped to the image. */

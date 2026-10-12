@@ -32,9 +32,9 @@ export default function Header() {
       <a className="skip" href="#main">Skip to content</a>
       <header className="site-header">
         <div className="wrap header-row">
-          <Link className="brand" to="/" aria-label="Tempo Community Academy home">
+          <Link className="brand" to="/" aria-label="TEMPO Community Academy home">
             <img src="/assets/logo.webp" width={48} height={48} alt="" />
-            <span>Tempo Community Academy</span>
+            <span>TEMPO Community Academy</span>
           </Link>
           <button
             ref={toggleRef}

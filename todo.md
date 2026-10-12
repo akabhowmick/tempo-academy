@@ -16,10 +16,10 @@
         (WebP, sized correctly, keep explicit width/height)
   - [x] Photos for Cafe & More and Makeup & Beauty
   - [x] `public/assets/avatar.svg` uses with real headshots
-  - [ ] Headshots for Eunice Lee and Jin Bok (initials badge for now)
+  - [x] Headshot for Jin Bok (chef illustration, her choice; Eunice Lee is no
+        longer teaching and was removed)
   - [x] Placeholder bios in `src/pages/About.tsx` (Halle, Cesia, Jasmine)
   - [x] Bios for Inae, Cynthia, Pognee, Jin (each has an /about/<name> page)
-  - [ ] Bio for Eunice Lee (if she's still teaching)
   - [x] Placeholder testimonial quotes in `src/pages/Home.tsx` (section
         removed, no testimonials for now)
 - [x] **[owner]** Confirm pricing, hours, both phone numbers, and the street
@@ -38,8 +38,8 @@
 - [ ] **[deploy]** Test on a real iPhone in Safari, over cellular.
 - [ ] **[deploy]** Paste the URL into Slack or iMessage, check the OG preview.
 - [ ] **[deploy]** Verify Google Business Profile name and address match the
-      footer exactly. The site no longer lists phone numbers (owners' request),
-      so check whether the profile should show one.
+      footer exactly, and that its phone is 917-582-9560 (Inae's line, as on
+      the old site).
 - [ ] **[deploy]** HTTPS redirect works, one canonical host, the other 301s.
 - [ ] **[deploy]** Hit a nonexistent URL, confirm the custom 404 renders
       and the response status is 404 (devtools Network tab). Also confirm

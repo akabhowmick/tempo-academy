@@ -10,28 +10,28 @@ import routeMeta from "@/lib/route-meta.json";
 const SECTIONS: { id: string; title: string; items: { q: string; a: ReactNode }[] }[] = [
   {
     id: "about",
-    title: "About Tempo Community Academy",
+    title: "About TEMPO Community Academy",
     items: [
       {
-        q: "What is Tempo Community Academy?",
+        q: "What is TEMPO Community Academy?",
         a: (
           <>
-            <p>Tempo Community Academy is a personalized learning and enrichment academy where individuals can explore interests, develop new skills, build confidence, and discover new possibilities.</p>
+            <p>TEMPO Community Academy is a personalized learning and enrichment academy where individuals can explore interests, develop new skills, build confidence, and discover new possibilities.</p>
             <p>Our programs combine hands-on learning with individualized instruction and meaningful experiences. We believe learning should be engaging, practical, creative, and connected to the interests of each learner.</p>
           </>
         ),
       },
       {
-        q: "Who is Tempo Community Academy for?",
+        q: "Who is TEMPO Community Academy for?",
         a: (
           <>
-            <p>Tempo Community Academy welcomes children, teens, young adults, and adults who want to learn something new, develop an existing interest, or build practical and creative skills.</p>
+            <p>TEMPO Community Academy welcomes children, teens, young adults, and adults who want to learn something new, develop an existing interest, or build practical and creative skills.</p>
             <p>Our programs are designed for learners with different interests, experience levels, and learning styles.</p>
           </>
         ),
       },
       {
-        q: "What types of classes does Tempo Community Academy offer?",
+        q: "What types of classes does TEMPO Community Academy offer?",
         a: (
           <>
             <p>Our programs may include:</p>
@@ -150,7 +150,7 @@ const SECTIONS: { id: string; title: string; items: { q: string; a: ReactNode }[
     items: [
       {
         q: "How do I register for a class?",
-        a: <p>Email us or send a message through our <Link to="/contact">contact page</Link>, and we will set up a time to talk about the right program and schedule. Each program comes with information about availability, scheduling, pricing, and registration requirements.</p>,
+        a: <p>Call or email us, or send a message through our <Link to="/contact">contact page</Link>, and we will set up a time to talk about the right program and schedule. Each program comes with information about availability, scheduling, pricing, and registration requirements.</p>,
       },
       {
         q: "Can I speak with someone before registering?",
@@ -193,7 +193,7 @@ const SECTIONS: { id: string; title: string; items: { q: string; a: ReactNode }[
       },
       {
         q: "Do you offer summer, school-break, or specialty programs?",
-        a: <p>Yes. Tempo Community Academy may offer seasonal programs, workshops, camps, and specialty experiences throughout the year. New offerings will be announced as they become available.</p>,
+        a: <p>Yes. TEMPO Community Academy may offer seasonal programs, workshops, camps, and specialty experiences throughout the year. New offerings will be announced as they become available.</p>,
       },
     ],
   },
@@ -220,7 +220,7 @@ const SECTIONS: { id: string; title: string; items: { q: string; a: ReactNode }[
     title: "Our approach",
     items: [
       {
-        q: "What makes Tempo Community Academy different?",
+        q: "What makes TEMPO Community Academy different?",
         a: (
           <>
             <p>We believe learning should be more than completing a lesson. It should be an opportunity to discover interests, develop confidence, practice meaningful skills, and experience the satisfaction of learning something new.</p>
@@ -233,12 +233,12 @@ const SECTIONS: { id: string; title: string; items: { q: string; a: ReactNode }[
         a: (
           <>
             <p>Everyone learns differently. Some people move quickly through a new skill. Others need more time, practice, or opportunities to explore before they feel comfortable.</p>
-            <p>At Tempo Community Academy, we recognize that there is no single &ldquo;right&rdquo; way to learn. We meet learners where they are and help them move forward from there.</p>
+            <p>At TEMPO Community Academy, we recognize that there is no single &ldquo;right&rdquo; way to learn. We meet learners where they are and help them move forward from there.</p>
           </>
         ),
       },
       {
-        q: "What is the goal of Tempo Community Academy?",
+        q: "What is the goal of TEMPO Community Academy?",
         a: (
           <>
             <p>Our goal is to create meaningful opportunities for people to learn, create, explore, connect, and grow.</p>
@@ -254,11 +254,11 @@ const SECTIONS: { id: string; title: string; items: { q: string; a: ReactNode }[
     items: [
       {
         q: "Can I walk in?",
-        a: <p>We meet by appointment only, no walk-ins. Email us or send a message through our <Link to="/contact">contact page</Link> and we will set up a time to talk about the right program and schedule.</p>,
+        a: <p>We meet by appointment only, no walk-ins. Call or email us, or send a message through our <Link to="/contact">contact page</Link>, and we will set up a time to talk about the right program and schedule.</p>,
       },
       {
         q: "What languages do you speak?",
-        a: <p>You can reach us in English, Korean (Inae), and Spanish (Cynthia). Just let us know your preferred language when you get in touch. Classes are offered in English, Korean, and Spanish.</p>,
+        a: <p>You can reach us in English, Korean (Inae, <a href="tel:+19175829560">917-582-9560</a>), and Spanish (Cesia, <a href="tel:+19298108648">929-810-8648</a>). Just let us know your preferred language when you get in touch. Classes are offered in English, Korean, and Spanish.</p>,
       },
       {
         q: "Where are classes held?",

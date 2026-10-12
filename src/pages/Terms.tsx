@@ -12,19 +12,19 @@ export default function Terms() {
       <div className="page-hero">
         <div className="wrap">
           <h1>Terms of use</h1>
-          <p>Effective date: October 10, 2026 | Last updated: October 10, 2026</p>
+          <p>Effective date: October 10, 2026 | Last updated: October 12, 2026</p>
         </div>
       </div>
       <section className="section">
         <div className="wrap prose">
           <h2>Welcome</h2>
-          <p>Welcome to the website of Tempo Community Academy (&ldquo;Tempo,&rdquo; &ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;). By accessing or using www.tempocommunityacademy.com (the &ldquo;Website&rdquo;), you agree to be bound by these Terms of Use. If you do not agree with these terms, please discontinue use of the Website.</p>
+          <p>Welcome to the website of TEMPO Community Academy, LLC (&ldquo;TEMPO,&rdquo; &ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;). By accessing or using www.tempocommunityacademy.com (the &ldquo;Website&rdquo;), you agree to be bound by these Terms of Use. If you do not agree with these terms, please discontinue use of the Website.</p>
 
           <h2>Purpose of this website</h2>
-          <p>Our Website is intended to provide general information about Tempo Community Academy and our programs. Using the Website or contacting us through it does not by itself enroll you in a program; enrollment is confirmed directly with our team.</p>
+          <p>Our Website is intended to provide general information about TEMPO Community Academy and our programs. Using the Website or contacting us through it does not by itself enroll you in a program; enrollment is confirmed directly with our team.</p>
 
           <h2>Intellectual property</h2>
-          <p>Unless otherwise noted, all content on this Website, including text, graphics, logos, photographs, icons, and design elements, is the property of Tempo Community Academy and is protected by applicable copyright, trademark, and intellectual property laws.</p>
+          <p>Unless otherwise noted, all content on this Website, including text, graphics, logos, photographs, icons, and design elements, is the property of TEMPO Community Academy, LLC and is protected by applicable copyright, trademark, and intellectual property laws.</p>
           <p>You may view, download, or print materials for your personal, non-commercial use only. You may not reproduce, modify, distribute, publish, or create derivative works without our prior written permission. Photographs of our learners and staff may not be copied or reused for any purpose.</p>
 
           <h2>Acceptable use</h2>
@@ -47,7 +47,7 @@ export default function Terms() {
           <p>This Website is provided on an &ldquo;as is&rdquo; and &ldquo;as available&rdquo; basis. We make no warranties, express or implied, regarding the availability, accuracy, reliability, or completeness of Website content.</p>
 
           <h2>Limitation of liability</h2>
-          <p>To the fullest extent permitted by law, Tempo Community Academy shall not be liable for any direct, indirect, incidental, consequential, or special damages arising from your use of, or inability to use, this Website.</p>
+          <p>To the fullest extent permitted by law, TEMPO Community Academy, LLC shall not be liable for any direct, indirect, incidental, consequential, or special damages arising from your use of, or inability to use, this Website.</p>
 
           <h2>Governing law</h2>
           <p>These Terms of Use are governed by the laws of the State of New York, without regard to its conflict of law principles.</p>
@@ -56,7 +56,7 @@ export default function Terms() {
           <p>We may update these Terms of Use at any time. Updated versions will be posted on this page with a revised effective date. Your continued use of the Website constitutes acceptance of any revisions.</p>
 
           <h2>Contact us</h2>
-          <p>Questions about these Terms of Use may be directed to:<br />Tempo Community Academy<br />214-22 42nd Ave, Bayside, NY 11361<br />Email: <a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a></p>
+          <p>Questions about these Terms of Use may be directed to:<br />TEMPO Community Academy, LLC<br />214-22 42nd Ave, Bayside, NY 11361<br />Phone: <a href="tel:+19175829560">917-582-9560</a><br />Email: <a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a></p>
         </div>
       </section>
     </Layout>

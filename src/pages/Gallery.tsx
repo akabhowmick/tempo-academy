@@ -39,9 +39,9 @@ const MORE: [string, string, string][] = [
   ["more-cs-group.webp", "Students working on laptops at tables in the computer lab", "Computer Science"],
   ["more-cs-laptops.webp", "An overhead view of a student and instructor working on laptops", "Computer Science"],
   ["more-cs-worksheets.webp", "Students working through laptop lessons and worksheets at a long table", "Computer Science"],
-  ["more-event-bounce.webp", "Tempo staff in green shirts at a trampoline park outing", "Community events"],
+  ["more-event-bounce.webp", "TEMPO staff in green shirts at a trampoline park outing", "Community events"],
   ["more-event-party.webp", "Students and staff gathered around a party table at a community event", "Community events"],
-  ["more-team.webp", "Five Tempo team members smiling together in front of window blinds", "Our team"],
+  ["more-team.webp", "Five TEMPO team members smiling together in front of window blinds", "Our team"],
 ];
 
 export default function Gallery() {

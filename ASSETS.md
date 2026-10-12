@@ -34,7 +34,8 @@ PDFs, no testimonials.
 | `TCA team members/Headshots of insturctors/Cesia Maldonado.png` | Cesia Maldonado, portrait, black blazer | Instructors, Cesia Maldonado (`About.tsx`) | `team-cesia-maldonado.webp` |
 | `TCA team members/Headshots of insturctors/Halle Kim.png` | Halle Kim, portrait, glasses, grey top | Instructors, Halle Kim (`About.tsx`) | `team-halle-kim.webp` |
 | `TCA team members/Headshots of insturctors/D1F74B83-4F06-43A2-95A8-6F4AFF005CAB.PNG` | **Unnamed** headshot: woman with curly hair, black top. Jasmine Rodriguez (confirmed) | Instructors, Jasmine Rodriguez (`About.tsx`) | `team-jasmine-rodriguez.webp` |
-| `TCA team members/Headshots of insturctors/PXL_20231224_170225167.MP.jpg` | Unnamed casual phone photo of a man in a flannel over a graphic tee. Pognee Kim (Jin's bio says "her", Pognee's says "Mr. Kim"); please confirm | Instructors, Pognee Kim (`src/lib/team.ts`) | `team-pognee-kim.webp` |
+| `TCA team members/Headshots of insturctors/PXL_20231224_170225167.MP.jpg` | Casual phone photo of a man in a flannel over a graphic tee. Pognee Kim (confirmed by Inae, who renamed it in the Drive folder) | Instructors, Pognee Kim (`src/lib/team.ts`) | `team-pognee-kim.webp` |
+| `TCA team members/Headshots of insturctors/image.jpeg` | Cartoon chef illustration. Jin Bok's choice instead of a headshot (per Inae) | Instructors, Jin Bok (`src/lib/team.ts`) | `team-jin-bok.webp` |
 | `TCA team members/Headshots of insturctors/Team Bios_.docx` | Bios for Halle, Cesia, Jasmine. Pognee and Jin are headings with no text | Bio text for Halle, Cesia, Jasmine (`About.tsx`) | n/a (text) |
 
 Sizes: hero 1200×900 (renders in the right column at about 520px), program cards 1200×900, gallery tiles 800×800,
@@ -63,8 +64,6 @@ photos". Sources and focal points are in `scripts/optimize-images.mjs`.
   Indoor team shots against the blinds: `10_3 Group 1.JPG` and `10_3 Group 2.jpg`.
   Also `10_3 Behind the Scenes.JPG` (black and white) and `IMG_3634.jpeg` (two
   staff working at laptops).
-- **`Headshots of insturctors/image.jpeg`**: a cartoon chef illustration, probably
-  a stand-in for the cooking instructor. Not recommended next to real photos.
 - **`Cooking/SongPyeonRiceCake/What is Songpyeon.docx`**: a short social-post
   style write-up about the Chuseok songpyeon class. It would make a good gallery
   caption or news blurb, but there's no slot for it today.
@@ -96,6 +95,4 @@ photos". Sources and focal points are in `scripts/optimize-images.mjs`.
 
 ## Still missing
 
-- **Headshots**: Eunice Lee and Jin Bok (they show an initials badge).
-- **Bios**: Eunice Lee. Everyone else has a bio page at `/about/<name>`.
 - **Vector logo**: only PNG/ICO icons were supplied, so there's no `favicon.svg`.

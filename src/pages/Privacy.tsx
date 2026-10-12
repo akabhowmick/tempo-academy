@@ -13,13 +13,13 @@ export default function Privacy() {
       <div className="page-hero">
         <div className="wrap">
           <h1>Website privacy policy</h1>
-          <p>Effective date: October 10, 2026 | Last updated: October 10, 2026</p>
+          <p>Effective date: October 10, 2026 | Last updated: October 12, 2026</p>
         </div>
       </div>
       <section className="section">
         <div className="wrap prose">
           <h2>Welcome</h2>
-          <p>Tempo Community Academy (&ldquo;Tempo,&rdquo; &ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is committed to protecting your privacy and earning your trust. This Website Privacy Policy explains how we collect, use, disclose, and protect information when you visit www.tempocommunityacademy.com (the &ldquo;Website&rdquo;).</p>
+          <p>TEMPO Community Academy, LLC (&ldquo;TEMPO,&rdquo; &ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is committed to protecting your privacy and earning your trust. This Website Privacy Policy explains how we collect, use, disclose, and protect information when you visit www.tempocommunityacademy.com (the &ldquo;Website&rdquo;).</p>
           <p>This policy applies only to information collected through our Website. By using our Website, you agree to the practices described in this Privacy Policy.</p>
 
           <h2>Information you voluntarily provide</h2>
@@ -72,7 +72,7 @@ export default function Privacy() {
           <p>We may update this Privacy Policy from time to time to reflect changes in technology, legal requirements, or our practices. The revised policy will be posted on this page with an updated effective date.</p>
 
           <h2>Contact us</h2>
-          <p>If you have questions about this Privacy Policy, please contact:<br />Tempo Community Academy<br />214-22 42nd Ave, Bayside, NY 11361<br />Email: <a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a></p>
+          <p>If you have questions about this Privacy Policy, please contact:<br />TEMPO Community Academy, LLC<br />214-22 42nd Ave, Bayside, NY 11361<br />Phone: <a href="tel:+19175829560">917-582-9560</a><br />Email: <a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a></p>
         </div>
       </section>
     </Layout>

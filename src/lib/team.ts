@@ -9,6 +9,7 @@ export interface Person {
   credentials?: string;
   role: string;
   img?: string;
+  imgAlt?: string;
   teaser?: string;
   bio?: string[];
 }
@@ -40,7 +41,7 @@ export const LEADERSHIP: Person[] = [
     bio: [
       "Education has been at the center of my career for more than two decades. Throughout that time, I have worked in classrooms, programs, and schools, and have had the opportunity to see firsthand how much people can learn when they are given meaningful opportunities to participate, practice, and discover their strengths.",
       "I have always believed that education should prepare us not only for school, but for life. Learning how to cook a meal, manage responsibilities, try something unfamiliar, work with others, develop a new interest, or simply become more confident are all important parts of becoming independent and living a fulfilling life.",
-      "That philosophy is what inspired us to create Tempo Community Academy. I wanted to build a place where learning is practical, social, creative, and relevant: a place where people can take classes, explore new interests, develop skills, and connect with others in a welcoming community.",
+      "That philosophy is what inspired us to create TEMPO Community Academy. I wanted to build a place where learning is practical, social, creative, and relevant: a place where people can take classes, explore new interests, develop skills, and connect with others in a welcoming community.",
       "My goal is simple: to create opportunities for people to keep learning, keep growing, and keep discovering what they are capable of at every stage of life.",
     ],
   },
@@ -58,7 +59,6 @@ export const LEADERSHIP: Person[] = [
 ];
 
 export const INSTRUCTORS: Person[] = [
-  { slug: "eunice-lee", name: "Eunice Lee", role: "Art & Design, Beginner. Licensed NYS teacher" },
   {
     slug: "pognee-kim",
     name: "Pognee Kim",
@@ -74,6 +74,8 @@ export const INSTRUCTORS: Person[] = [
     slug: "jin-bok",
     name: "Jin Bok",
     role: "Cooking & Baking",
+    img: "team-jin-bok.webp",
+    imgAlt: "Cartoon illustration of a smiling chef",
     teaser: "Chef Jin holds professional certifications in Korean and Chinese cuisine from her culinary career in South Korea.",
     bio: [
       "Chef Jin holds professional certifications in both Korean and Chinese cuisine, earned during her culinary career in South Korea.",

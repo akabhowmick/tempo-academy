@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="wrap">
         <div className="footer-grid">
           <div>
-            <h3>Tempo Community Academy</h3>
+            <h3>TEMPO Community Academy</h3>
             <p>Personalized creative and enrichment programs in Bayside, Queens.</p>
             <p className="values">Trust<br />Empowerment<br />Motivation<br />Passion<br />Opportunity</p>
           </div>
@@ -16,6 +16,8 @@ export default function Footer() {
             <ul>
               <li>214-22 42nd Ave<br />Bayside, NY 11361</li>
               <li><a href="https://www.google.com/maps/search/?api=1&query=214-22+42nd+Ave+Bayside+NY+11361">Get directions</a></li>
+              <li><a href="tel:+19175829560">Inae: 917-582-9560</a> (English &amp; Korean)</li>
+              <li><a href="tel:+19298108648">Cesia: 929-810-8648</a> (English &amp; Spanish)</li>
               <li><a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a><span className="footer-note">English, Korean &amp; Spanish</span></li>
               <li><a href="https://www.instagram.com/tempocommunity_academy1/">Instagram</a> <span aria-hidden="true">·</span> <a href="https://www.tiktok.com/@tempo.community.a">TikTok</a></li>
             </ul>
@@ -41,8 +43,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="fineprint">
-          <p>&copy; {year} Tempo Community Academy. All rights reserved.</p>
-          <p><Link to="/privacy">Privacy</Link> <span aria-hidden="true">·</span> <Link to="/terms">Terms</Link> <span aria-hidden="true">·</span> <Link to="/nondiscrimination">Nondiscrimination</Link> <span aria-hidden="true">·</span> <Link to="/accessibility">Accessibility</Link></p>
+          <p>&copy; {year} TEMPO Community Academy, LLC. All rights reserved.</p>
+          <p><Link to="/privacy">Privacy</Link> <span aria-hidden="true">·</span> <Link to="/terms">Terms</Link> <span aria-hidden="true">·</span> <Link to="/nondiscrimination">Nondiscrimination</Link> <span aria-hidden="true">·</span> <Link to="/text-messaging">Text messaging</Link> <span aria-hidden="true">·</span> <Link to="/accessibility">Accessibility</Link></p>
         </div>
       </div>
     </footer>

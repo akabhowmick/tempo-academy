@@ -1,6 +1,6 @@
 {
   "/": {
-    "title": "Tempo Community Academy | Art, Cooking, Dance and Computer Science Classes in Bayside, NY",
+    "title": "TEMPO Community Academy | Art, Cooking, Dance and Computer Science Classes in Bayside, NY",
     "description": "Personalized enrichment classes in Bayside, Queens. Art, cooking and baking, dance, makeup, barista skills, and computer science in small groups and 1:1 sessions."
   },
   "/courses": {
@@ -9,76 +9,80 @@
   },
   "/pricing": {
     "title": "Pricing",
-    "description": "Class pricing at Tempo Community Academy in Bayside, Queens: computer science, art, cooking, dance, cafe skills, and makeup, in group and 1:1 formats."
+    "description": "Class pricing at TEMPO Community Academy in Bayside, Queens: computer science, art, cooking, dance, cafe skills, and makeup, in group and 1:1 formats."
   },
   "/about": {
     "title": "About Us",
-    "description": "Meet the Tempo Community Academy team: licensed NYS teachers and certified specialists offering personalized enrichment programs in Bayside, Queens."
+    "description": "Meet the TEMPO Community Academy team: licensed NYS teachers and certified specialists offering personalized enrichment programs in Bayside, Queens."
   },
   "/about/inae-kim": {
     "title": "Inae Kim, Co-founder & Program Director",
-    "description": "An educator for more than 20 years, Inae Kim co-founded Tempo Community Academy to build a community where learning feels joyful, meaningful, and lifelong."
+    "description": "An educator for more than 20 years, Inae Kim co-founded TEMPO Community Academy to build a community where learning feels joyful, meaningful, and lifelong."
   },
   "/about/cynthia-martinez": {
     "title": "Cynthia Martinez, Co-founder & Admin Director",
-    "description": "Cynthia Martinez brings more than two decades in education to Tempo Community Academy, where learning prepares people not only for school, but for life."
+    "description": "Cynthia Martinez brings more than two decades in education to TEMPO Community Academy, where learning prepares people not only for school, but for life."
   },
   "/about/cesia-maldonado": {
     "title": "Cesia Maldonado, Office Manager",
-    "description": "Cesia Maldonado is Tempo Community Academy's Office Manager and Beginner Computer Class instructor."
+    "description": "Cesia Maldonado is TEMPO Community Academy's Office Manager and Beginner Computer Class instructor."
   },
   "/about/pognee-kim": {
     "title": "Pognee Kim, Art & Computer Science Instructor",
-    "description": "Pognee Kim, a special education teacher with more than 10 years of experience, teaches Computer Animation and T-Shirt Making at Tempo Community Academy."
+    "description": "Pognee Kim, a special education teacher with more than 10 years of experience, teaches Computer Animation and T-Shirt Making at TEMPO Community Academy."
   },
   "/about/jin-bok": {
     "title": "Jin Bok, Cooking Instructor",
-    "description": "Chef Jin holds professional certifications in Korean and Chinese cuisine and teaches cooking at Tempo Community Academy."
+    "description": "Chef Jin holds professional certifications in Korean and Chinese cuisine and teaches cooking at TEMPO Community Academy."
   },
   "/about/jasmine-rodriguez": {
     "title": "Jasmine Rodriguez, Baking Instructor",
-    "description": "Jasmine Rodriguez leads hands-on baking classes for people of all ages and abilities at Tempo Community Academy."
+    "description": "Jasmine Rodriguez leads hands-on baking classes for people of all ages and abilities at TEMPO Community Academy."
   },
   "/about/halle-kim": {
     "title": "Halle Kim, Dance & Body Form Instructor",
-    "description": "Halle Kim, a BASI Pilates–certified instructor and registered nurse, teaches Dance & Body Form at Tempo Community Academy."
+    "description": "Halle Kim, a BASI Pilates–certified instructor and registered nurse, teaches Dance & Body Form at TEMPO Community Academy."
   },
   "/gallery": {
     "title": "Gallery",
-    "description": "Photos from classes and events at Tempo Community Academy in Bayside, Queens."
+    "description": "Photos from classes and events at TEMPO Community Academy in Bayside, Queens."
   },
   "/faq": {
     "title": "FAQ",
-    "description": "Answers to common questions about Tempo Community Academy: classes, private lessons, enrollment, scheduling, pricing, and languages spoken."
+    "description": "Answers to common questions about TEMPO Community Academy: classes, private lessons, enrollment, scheduling, pricing, and languages spoken."
   },
   "/contact": {
     "title": "Contact",
-    "description": "Contact Tempo Community Academy in Bayside, Queens by email or the contact form. By appointment only. English, Korean, and Spanish spoken."
+    "description": "Contact TEMPO Community Academy in Bayside, Queens by email or the contact form. By appointment only. English, Korean, and Spanish spoken."
   },
   "/privacy": {
     "title": "Privacy Policy",
-    "description": "How Tempo Community Academy collects and uses information submitted through this website."
+    "description": "How TEMPO Community Academy collects and uses information submitted through this website."
   },
   "/accessibility": {
     "title": "Accessibility Statement",
-    "description": "Tempo Community Academy's commitment to an accessible website for all visitors."
+    "description": "TEMPO Community Academy's commitment to an accessible website for all visitors."
   },
   "/terms": {
     "title": "Terms of Use",
-    "description": "Terms of use for the Tempo Community Academy website."
+    "description": "Terms of use for the TEMPO Community Academy website."
   },
   "/nondiscrimination": {
     "title": "Nondiscrimination Statement",
-    "description": "Tempo Community Academy does not discriminate and offers reasonable accommodations and language assistance on request."
+    "description": "TEMPO Community Academy does not discriminate and offers reasonable accommodations and language assistance on request."
+  },
+  "/text-messaging": {
+    "title": "Text Messaging Policy",
+    "description": "When and how TEMPO Community Academy may text students and families, what texts are used for, and how to opt out."
   },
   "/thanks": {
     "title": "Thank You",
-    "description": "Your message to Tempo Community Academy was sent. We reply within one business day.",
+    "description": "Your message to TEMPO Community Academy was sent. We reply within one business day.",
     "noindex": true
   },
   "/404": {
     "title": "Page Not Found",
-    "description": "The page you were looking for does not exist. Find your way back to Tempo Community Academy.",
+    "description": "The page you were looking for does not exist. Find your way back to TEMPO Community Academy.",
     "noindex": true
   }
 }

@@ -39,7 +39,7 @@ function setCanonical(href: string) {
  */
 export function useSeo({ title, description, path, noindex }: SeoOptions) {
   useEffect(() => {
-    const fullTitle = path === "/" ? title : `${title} | Tempo Community Academy`;
+    const fullTitle = path === "/" ? title : `${title} | TEMPO Community Academy`;
     document.title = fullTitle;
     setMeta("description", description);
     setMeta("og:title", fullTitle, "property");

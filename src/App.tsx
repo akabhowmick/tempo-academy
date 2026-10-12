@@ -13,6 +13,7 @@ import Privacy from "@/pages/Privacy";
 import Accessibility from "@/pages/Accessibility";
 import Terms from "@/pages/Terms";
 import Nondiscrimination from "@/pages/Nondiscrimination";
+import TextMessaging from "@/pages/TextMessaging";
 import NotFound from "@/pages/NotFound";
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/accessibility" element={<Accessibility />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/nondiscrimination" element={<Nondiscrimination />} />
+        <Route path="/text-messaging" element={<TextMessaging />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

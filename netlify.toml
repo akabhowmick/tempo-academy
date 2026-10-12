@@ -37,4 +37,4 @@
     # - connect-src/script-src allow Plausible (plausible.io). Swapping to
     #   Fathom instead? Replace both plausible.io entries with
     #   cdn.usefathom.com.
-    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-src https://www.google.com; form-action 'self' https://formsubmit.co; script-src 'self' 'sha256-nvW0quiRbCitCDsrjZCDzceSrkedYFjqZQJ7MaDIfoQ=' https://plausible.io; connect-src 'self' https://plausible.io; upgrade-insecure-requests"
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-src https://www.google.com; form-action 'self' https://formsubmit.co; script-src 'self' 'sha256-h5/gQMtpLAY7Gr6P+XGBlAlyhLgvKnh+uuy++wErjCk=' https://plausible.io; connect-src 'self' https://plausible.io; upgrade-insecure-requests"

@@ -31,8 +31,7 @@ export default function Courses() {
           <div>
             <h2 id="art-h">Art &amp; Design</h2>
             <p>
-              <strong>Beginner:</strong> Eunice Lee, a licensed NYS teacher.{" "}
-              <strong>Advanced:</strong> Pognee Kim, a licensed NYS teacher.
+              <strong>Instructor:</strong> Pognee Kim, a licensed NYS teacher.
             </p>
             <p>
               Drawing, painting, sculpture, and hands-on crafting with pencils, charcoal,

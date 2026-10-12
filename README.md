@@ -120,8 +120,7 @@ in the component if the output size changed.
 ## Content still to come
 | Slot | Status |
 | --- | --- |
-| Headshots in `src/lib/team.ts` | Eunice Lee and Jin Bok show an initials badge until photos arrive |
-| Team in `src/lib/team.ts` | Eunice has no bio yet. Each bio gets its own `/about/<slug>` page (also add it to `route-meta.json` and `sitemap.xml`) |
+| Team in `src/lib/team.ts` | Each bio gets its own `/about/<slug>` page (also add it to `route-meta.json` and `sitemap.xml`) |
 
 ## Booking, when you scope it
 No backend yet, contact form still posts to FormSubmit. When booking is

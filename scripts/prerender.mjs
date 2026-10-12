@@ -62,7 +62,7 @@ function main() {
   const routes = Object.entries(routeMeta).filter(([path]) => path !== "/404");
 
   for (const [path, meta] of routes) {
-    const fullTitle = path === "/" ? meta.title : `${meta.title} | Tempo Community Academy`;
+    const fullTitle = path === "/" ? meta.title : `${meta.title} | TEMPO Community Academy`;
     const url = `${BASE_URL}${path}`;
 
     let html = template;

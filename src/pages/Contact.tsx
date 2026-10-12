@@ -53,7 +53,7 @@ export default function Contact() {
       <div className="page-hero">
         <div className="wrap">
           <h1>Contact us</h1>
-          <p>We meet by appointment only, no walk-ins. Email us or send the form and we will reply within one business day.</p>
+          <p>We meet by appointment only, no walk-ins. Call, email, or send the form and we will reply within one business day.</p>
         </div>
       </div>
 
@@ -62,8 +62,9 @@ export default function Contact() {
           <div>
             <h2>Reach us directly</h2>
             <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.4rem", display: "grid", gap: ".6rem" }}>
+              <li><strong>Inae:</strong> <a href="tel:+19175829560">917-582-9560</a> (English &amp; Korean)</li>
+              <li><strong>Cesia:</strong> <a href="tel:+19298108648">929-810-8648</a> (English &amp; Spanish)</li>
               <li><strong>Email:</strong> <a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a></li>
-              <li><strong>Languages:</strong> English, Korean (Inae), and Spanish (Cynthia)</li>
               <li><strong>Follow us:</strong> <a href="https://www.instagram.com/tempocommunity_academy1/">Instagram</a> and <a href="https://www.tiktok.com/@tempo.community.a">TikTok</a></li>
               <li><strong>Address:</strong> 214-22 42nd Ave, Bayside, NY 11361 (<a href="https://www.google.com/maps/search/?api=1&query=214-22+42nd+Ave+Bayside+NY+11361">get directions</a>)</li>
             </ul>
@@ -72,7 +73,7 @@ export default function Contact() {
             <iframe
               className="map-embed"
               loading="lazy"
-              title="Map showing Tempo Community Academy at 214-22 42nd Ave, Bayside, NY"
+              title="Map showing TEMPO Community Academy at 214-22 42nd Ave, Bayside, NY"
               src="https://www.google.com/maps?q=214-22+42nd+Ave,+Bayside,+NY+11361&output=embed"
               referrerPolicy="no-referrer-when-downgrade"
             />
@@ -81,7 +82,7 @@ export default function Contact() {
             <h2>Send a message</h2>
             {!FORM_ACTION && (
               <p className="notice">
-                The contact form isn&apos;t connected yet. Please email us at <a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a> in the meantime.
+                The contact form isn&apos;t connected yet. Please reach us directly by <a href="tel:+19175829560">phone</a> or <a href="mailto:contacttempoacademy@gmail.com">email</a> in the meantime.
               </p>
             )}
             <form className="form-grid" action={FORM_ACTION} method="POST" noValidate onSubmit={handleSubmit}>

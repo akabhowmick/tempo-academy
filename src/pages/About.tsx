@@ -8,7 +8,7 @@ function PersonCard({ p }: { p: Person }) {
   return (
     <div className="person">
       {p.img ? (
-        <img src={`/assets/${p.img}`} width={600} height={600} loading="lazy" alt={`Portrait of ${p.name}`} />
+        <img src={`/assets/${p.img}`} width={600} height={600} loading="lazy" alt={p.imgAlt ?? `Portrait of ${p.name}`} />
       ) : (
         <span className="initials" aria-hidden="true">{initials(p)}</span>
       )}
@@ -36,7 +36,7 @@ export default function About() {
       <section className="section">
         <div className="wrap prose">
           <h2>Our mission</h2>
-          <p>Tempo Community Academy offers personalized creative and enrichment programs designed to nurture each learner&apos;s unique strengths and interests. Our services bring engaging, high quality learning experiences directly to community settings, allowing learners to grow in familiar and comfortable environments.</p>
+          <p>TEMPO Community Academy offers personalized creative and enrichment programs designed to nurture each learner&apos;s unique strengths and interests. Our services bring engaging, high quality learning experiences directly to community settings, allowing learners to grow in familiar and comfortable environments.</p>
           <p>Experienced instructors collaborate with each learner to create customized learning plans that foster creativity, build confidence, and strengthen essential life skills, empowering every learner to thrive in their unique way.</p>
         </div>
       </section>
