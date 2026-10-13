@@ -22,7 +22,7 @@ export default function Nondiscrimination() {
           <p>If you believe you have experienced discrimination while participating in our programs, please contact us so we can address your concerns promptly and respectfully.</p>
 
           <h2>Contact us</h2>
-          <p>Questions about this statement may be directed to:<br />TEMPO Community Academy, LLC<br />214-22 42nd Ave, Bayside, NY 11361<br />Phone: <a href="tel:+19175829560">917-582-9560</a><br />Email: <a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a></p>
+          <p>Questions about this statement may be directed to:<br />TEMPO Community Academy, LLC<br />214-22 42nd Ave, Bayside, NY 11361<br />Email: <a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a></p>
         </div>
       </section>
     </Layout>

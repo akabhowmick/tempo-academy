@@ -16,8 +16,8 @@ export default function Footer() {
             <ul>
               <li>214-22 42nd Ave<br />Bayside, NY 11361</li>
               <li><a href="https://www.google.com/maps/search/?api=1&query=214-22+42nd+Ave+Bayside+NY+11361">Get directions</a></li>
-              <li><a href="tel:+19175829560">Inae: 917-582-9560</a> (English &amp; Korean)</li>
-              <li><a href="tel:+19298108648">Cesia: 929-810-8648</a> (English &amp; Spanish)</li>
+              <li>Korean: <a href="tel:+19175829560">917-582-9560</a> (Inae)</li>
+              <li>English &amp; Spanish: <a href="tel:+19298108648">929-810-8648</a> (Cesia)</li>
               <li><a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a><span className="footer-note">English, Korean &amp; Spanish</span></li>
               <li><a href="https://www.instagram.com/tempocommunity_academy1/">Instagram</a> <span aria-hidden="true">·</span> <a href="https://www.tiktok.com/@tempo.community.a">TikTok</a></li>
             </ul>
@@ -34,6 +34,7 @@ export default function Footer() {
             <h3>Explore</h3>
             <ul>
               <li><Link to="/courses">Courses</Link></li>
+              <li><Link to="/schedule">Schedule</Link></li>
               <li><Link to="/pricing">Pricing</Link></li>
               <li><Link to="/about">About us</Link></li>
               <li><Link to="/gallery">Gallery</Link></li>

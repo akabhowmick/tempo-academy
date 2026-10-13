@@ -72,7 +72,7 @@ export default function Privacy() {
           <p>We may update this Privacy Policy from time to time to reflect changes in technology, legal requirements, or our practices. The revised policy will be posted on this page with an updated effective date.</p>
 
           <h2>Contact us</h2>
-          <p>If you have questions about this Privacy Policy, please contact:<br />TEMPO Community Academy, LLC<br />214-22 42nd Ave, Bayside, NY 11361<br />Phone: <a href="tel:+19175829560">917-582-9560</a><br />Email: <a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a></p>
+          <p>If you have questions about this Privacy Policy, please contact:<br />TEMPO Community Academy, LLC<br />214-22 42nd Ave, Bayside, NY 11361<br />Email: <a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a></p>
         </div>
       </section>
     </Layout>

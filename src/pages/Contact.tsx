@@ -62,9 +62,9 @@ export default function Contact() {
           <div>
             <h2>Reach us directly</h2>
             <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.4rem", display: "grid", gap: ".6rem" }}>
-              <li><strong>Inae:</strong> <a href="tel:+19175829560">917-582-9560</a> (English &amp; Korean)</li>
-              <li><strong>Cesia:</strong> <a href="tel:+19298108648">929-810-8648</a> (English &amp; Spanish)</li>
               <li><strong>Email:</strong> <a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a></li>
+              <li><strong>Korean:</strong> <a href="tel:+19175829560">917-582-9560</a> (Inae)</li>
+              <li><strong>English &amp; Spanish:</strong> <a href="tel:+19298108648">929-810-8648</a> (Cesia)</li>
               <li><strong>Follow us:</strong> <a href="https://www.instagram.com/tempocommunity_academy1/">Instagram</a> and <a href="https://www.tiktok.com/@tempo.community.a">TikTok</a></li>
               <li><strong>Address:</strong> 214-22 42nd Ave, Bayside, NY 11361 (<a href="https://www.google.com/maps/search/?api=1&query=214-22+42nd+Ave+Bayside+NY+11361">get directions</a>)</li>
             </ul>
@@ -82,7 +82,7 @@ export default function Contact() {
             <h2>Send a message</h2>
             {!FORM_ACTION && (
               <p className="notice">
-                The contact form isn&apos;t connected yet. Please reach us directly by <a href="tel:+19175829560">phone</a> or <a href="mailto:contacttempoacademy@gmail.com">email</a> in the meantime.
+                The contact form isn&apos;t connected yet. Please email us at <a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a>, or call one of the numbers on this page, in the meantime.
               </p>
             )}
             <form className="form-grid" action={FORM_ACTION} method="POST" noValidate onSubmit={handleSubmit}>
@@ -145,7 +145,7 @@ export default function Contact() {
               {/* FormSubmit honeypot: real visitors never see or fill it, so a value means a bot. */}
               <label className="hp" htmlFor="_honey" aria-hidden="true" tabIndex={-1}>Leave this field empty</label>
               <input className="hp" type="text" id="_honey" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" />
-              <input type="hidden" name="_next" value="https://www.tempocommunityacademy.com/thanks" />
+              <input type="hidden" name="_next" value={`${window.location.origin}/thanks`} />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_subject" value="New inquiry from tempocommunityacademy.com" />

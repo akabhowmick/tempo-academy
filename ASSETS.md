@@ -49,11 +49,17 @@ The "register through our website" answer was changed to call/email/contact
 page, since the site has no online registration. Home keeps a 3-question
 teaser linking to it.
 
-## Gallery "See more"
+## Gallery category pages
 
-23 more photos, square-cropped to `public/assets/more-*.webp` and listed in
-`MORE` in `Gallery.tsx`. They load only after the visitor taps "See more
-photos". Sources and focal points are in `scripts/optimize-images.mjs`.
+`/gallery` shows one cover tile per category (the `gallery-*.webp` tiles
+above). Each opens `/gallery/<slug>` with every photo in that category,
+including 26 more square crops in `public/assets/more-*.webp`. Categories and
+photos are listed in `src/lib/gallery.ts`; "Our studio" and "Our team" share
+one category. Sources and focal points are in `scripts/optimize-images.mjs`.
+
+Dance had a single photo, so three of the alternates were added to its page:
+`Dance&Body Form/IMG_1585.jpeg` (`more-dance-squat.webp`), `IMG_4423.JPG`
+(`more-dance-moves.webp`) and `IMG_4783.jpg` (`more-dance-floor.webp`).
 
 ## Unplaced
 
@@ -80,7 +86,7 @@ photos". Sources and focal points are in `scripts/optimize-images.mjs`.
   - Events: `IMG_4176` (near-duplicate of the hero photo)
 
   The rest are similar angles of the same sessions: Art 6, Baking 22, Computer
-  20, Cooking 31, Dance 8, Events 5, T-shirt 18.
+  20, Cooking 31, Dance 5, Events 5, T-shirt 18.
 
 ## Decisions (owner review)
 

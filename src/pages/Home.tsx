@@ -25,7 +25,7 @@ export default function Home() {
             <p className="lede">Personalized classes in art, cooking and baking, dance, beauty, barista skills, and computer science. Small groups and 1:1 sessions, taught with patience in a space that feels like community.</p>
             <div className="hero-actions">
               <Link className="btn" to="/courses">Explore courses</Link>
-              <a className="btn btn-ghost" href="tel:+19175829560">Call 917-582-9560</a>
+              <a className="btn btn-ghost" href="mailto:contacttempoacademy@gmail.com">Email us</a>
             </div>
             <p className="hero-note">By appointment only. Classes offered in English, Korean, and Spanish.</p>
           </div>

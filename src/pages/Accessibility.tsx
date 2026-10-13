@@ -20,7 +20,7 @@ export default function Accessibility() {
           <h2>Standards</h2>
           <p>We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA. Measures on this site include semantic page structure, sufficient color contrast, visible keyboard focus, full keyboard navigation, text alternatives for meaningful images, labeled form fields, and respect for reduced-motion preferences.</p>
           <h2>Feedback</h2>
-          <p>If you encounter any barrier using this site or need information in an alternative format, please tell us and we will work to fix it. Email <a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a> or call <a href="tel:+19175829560">917-582-9560</a>. Please include the page address and a description of the problem.</p>
+          <p>If you encounter any barrier using this site or need information in an alternative format, please tell us and we will work to fix it. Email <a href="mailto:contacttempoacademy@gmail.com">contacttempoacademy@gmail.com</a>. Please include the page address and a description of the problem.</p>
         </div>
       </section>
     </Layout>

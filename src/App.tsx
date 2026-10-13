@@ -3,9 +3,11 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Home from "@/pages/Home";
 import Courses from "@/pages/Courses";
 import Pricing from "@/pages/Pricing";
+import Schedule from "@/pages/Schedule";
 import About from "@/pages/About";
 import TeamMember from "@/pages/TeamMember";
 import Gallery from "@/pages/Gallery";
+import GalleryCategory from "@/pages/GalleryCategory";
 import Faq from "@/pages/Faq";
 import Contact from "@/pages/Contact";
 import Thanks from "@/pages/Thanks";
@@ -24,9 +26,11 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/schedule" element={<Schedule />} />
         <Route path="/about" element={<About />} />
         <Route path="/about/:slug" element={<TeamMember />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/gallery/:slug" element={<GalleryCategory />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/thanks" element={<Thanks />} />

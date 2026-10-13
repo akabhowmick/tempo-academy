@@ -32,15 +32,17 @@ Netlify's Site settings → Environment variables for production builds.
 | `VITE_FORMSUBMIT_ID` | [FormSubmit](https://formsubmit.co) endpoint for the contact form, which posts to `https://formsubmit.co/<value>`. Use the inbox email address only for the one-time activation, then the random-string ID (see below). Until set, the form on `/contact` is disabled and shows an email fallback instead of posting to a dead endpoint. |
 
 #### Activating the contact form (FormSubmit)
-1. Set `VITE_FORMSUBMIT_ID` to the inbox address (`contacttempoacademy@gmail.com`)
-   in Netlify, deploy, and submit the form once.
+1. `VITE_FORMSUBMIT_ID` is already set to the inbox address
+   (`contacttempoacademy@gmail.com`) in the committed `.env.production`, so
+   any deploy has a live form. Deploy and submit the form once.
 2. FormSubmit emails that inbox an activation link. Click it.
-3. FormSubmit then gives a random-string ID for the form. Replace the email
-   address in `VITE_FORMSUBMIT_ID` with that ID and redeploy, so the address
-   isn't exposed in the page source.
+3. Optional: FormSubmit then gives a random-string ID for the form. You can
+   put that ID in `.env.production` (or a Netlify env var, which overrides
+   it) and redeploy. The address is public on every page anyway.
 
 The form is a plain POST (no JS fetch). Hidden fields set the redirect back to
-`/thanks` (`_next`), turn off FormSubmit's captcha page (`_captcha`; the
+`/thanks` on whatever host served the page (`_next`, so tests on the
+netlify.app address come back there), turn off FormSubmit's captcha page (`_captcha`; the
 `_honey` honeypot field catches bots instead), use the table email layout
 (`_template`), and set the email subject (`_subject`).
 
@@ -58,9 +60,11 @@ node -e "const fs=require('fs'),c=require('crypto');const h=fs.readFileSync('dis
 
 ## Structure
 - `src/App.tsx` route table
-- `src/pages/` one file per route: Home, Courses, Pricing, About, Gallery,
-  Faq, Contact, Thanks, Privacy, Terms, Nondiscrimination, Accessibility,
-  NotFound
+- `src/pages/` one file per route: Home, Courses, Schedule, Pricing, About,
+  TeamMember, Gallery, GalleryCategory, Faq, Contact, Thanks, Privacy, Terms,
+  Nondiscrimination, TextMessaging, Accessibility, NotFound
+- `src/lib/` data the owners update: `team.ts` (bios), `schedule.ts`
+  (weekly classes, events, closures), `gallery.ts` (photo categories)
 - `src/components/Header.tsx` mobile nav toggle (React state), `Footer.tsx`,
   `CallBar.tsx`, `Layout.tsx` wraps every page, `ErrorBoundary.tsx` top-level
   crash guard (wraps `<App />` in `src/main.tsx`)
@@ -139,8 +143,9 @@ Owner-blocked or deploy-only items remaining — see `todo.md` for the full,
 checkable list with more detail.
 1. Activate FormSubmit (see "Activating the contact form" above), swap in
    the random-string ID, and test delivery from an outside email address.
-2. Pricing, hours, and address are confirmed. Phone numbers are
-   intentionally not published (owners' request): contact is email + form.
+2. Pricing, hours, and address are confirmed. Email is the main contact.
+   Phones are listed per language only: Korean 917-582-9560 (Inae),
+   English & Spanish 929-810-8648 (Cesia).
 3. Get the remaining photos and bios (see "Content still to come" above).
 4. Confirm the Plausible domain/site setup matches production.
 5. Add uptime monitoring.

@@ -7,6 +7,10 @@
     "title": "Courses",
     "description": "Six hands-on programs in Bayside, Queens: Art and Design, Cooking and Baking, Dance and Body Form, Computer Science, Cafe skills, and Makeup and Beauty."
   },
+  "/schedule": {
+    "title": "Schedule",
+    "description": "Weekly class times at TEMPO Community Academy in Bayside, Queens: computer science, art, T-shirt design, animation, dance, and cooking, plus events and closures."
+  },
   "/pricing": {
     "title": "Pricing",
     "description": "Class pricing at TEMPO Community Academy in Bayside, Queens: computer science, art, cooking, dance, cafe skills, and makeup, in group and 1:1 formats."
@@ -46,6 +50,42 @@
   "/gallery": {
     "title": "Gallery",
     "description": "Photos from classes and events at TEMPO Community Academy in Bayside, Queens."
+  },
+  "/gallery/art-design": {
+    "title": "Art & Design Photos",
+    "description": "Photos of drawing, painting, and Korean ink art at TEMPO Community Academy in Bayside, Queens."
+  },
+  "/gallery/cooking-baking": {
+    "title": "Cooking & Baking Photos",
+    "description": "Photos of hands-on cooking, from stir-fries to songpyeon rice cakes at TEMPO Community Academy in Bayside, Queens."
+  },
+  "/gallery/dance-body-form": {
+    "title": "Dance & Body Form Photos",
+    "description": "Photos of dance and body form classes at TEMPO Community Academy in Bayside, Queens."
+  },
+  "/gallery/computer-science": {
+    "title": "Computer Science Photos",
+    "description": "Photos of beginner and advanced computer classes at TEMPO Community Academy in Bayside, Queens."
+  },
+  "/gallery/baking": {
+    "title": "Baking Photos",
+    "description": "Photos of baking classes and the treats students make at TEMPO Community Academy in Bayside, Queens."
+  },
+  "/gallery/tshirt-design": {
+    "title": "T-shirt design Photos",
+    "description": "Photos of custom T-shirt design with the heat press at TEMPO Community Academy in Bayside, Queens."
+  },
+  "/gallery/community-events": {
+    "title": "Community events Photos",
+    "description": "Photos of outings and community events at TEMPO Community Academy in Bayside, Queens."
+  },
+  "/gallery/student-projects": {
+    "title": "Student projects Photos",
+    "description": "Photos of student artwork and finished T-shirts at TEMPO Community Academy in Bayside, Queens."
+  },
+  "/gallery/studio-team": {
+    "title": "Our studio & team Photos",
+    "description": "Photos of our teaching kitchen and team at TEMPO Community Academy in Bayside, Queens."
   },
   "/faq": {
     "title": "FAQ",
