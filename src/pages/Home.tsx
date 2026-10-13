@@ -39,9 +39,22 @@ export default function Home() {
 
       <section className="section">
         <div className="wrap">
-          <div className="section-head">
-            <h2>Compassion meets expertise</h2>
-            <p>Our mission is to provide a well-rounded, experiential education that fosters creativity, skill development, and personal growth through high-quality instruction in music, culinary arts, visual arts, and related disciplines. Every learner works with experienced instructors on a customized plan that builds confidence and essential life skills.</p>
+          <div className="mission-row">
+            <div className="section-head">
+              <h2>Compassion meets expertise</h2>
+              <p>Our mission is to provide a well-rounded, experiential education that fosters creativity, skill development, and personal growth through high-quality instruction in music, culinary arts, visual arts, and related disciplines. Every learner works with experienced instructors on a customized plan that builds confidence and essential life skills.</p>
+            </div>
+            {/* The footer's TEMPO values block, at the owners' request. */}
+            <div className="tempo-card">
+              <h3>TEMPO Community Academy</h3>
+              <ul className="values tempo-values">
+                <li>Trust</li>
+                <li>Empowerment</li>
+                <li>Motivation</li>
+                <li>Passion</li>
+                <li>Opportunity</li>
+              </ul>
+            </div>
           </div>
           <div className="steps">
             <div className="step">

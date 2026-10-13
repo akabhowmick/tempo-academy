@@ -66,6 +66,14 @@ a:hover{color:var(--green-900)}
 .section{padding-block:4.5rem}
 .section-alt{background:var(--white)}
 .section-head{max-width:44rem;margin-bottom:2.2rem}
+.mission-row{display:grid;grid-template-columns:minmax(0,44rem) minmax(0,21rem);justify-content:space-between;align-items:center;gap:2rem;margin-bottom:2.2rem}
+.mission-row .section-head{margin-bottom:0}
+.tempo-card{background:var(--green-900);color:#E9F2E6;border-radius:var(--r-lg);box-shadow:var(--shadow);padding:1.8rem 2rem}
+.tempo-card h3{color:var(--cream-200);font-size:1.3rem;margin:0 0 .8rem}
+.tempo-values{list-style:none;padding:0;margin:0;font-size:1.15rem}
+@media(max-width:860px){.mission-row{grid-template-columns:1fr}}
+/* Tablet portrait: the card spans the full width, so run the words in a row. */
+@media(min-width:561px) and (max-width:860px){.tempo-values{display:flex;flex-wrap:wrap;gap:.2rem 1.6rem}}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
 .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem}
 @media(max-width:960px){.grid-3{grid-template-columns:repeat(2,1fr)}}
