@@ -19,8 +19,9 @@ export default function Courses() {
       </div>
 
       <section className="section" id="art" aria-labelledby="art-h">
-        <div className="wrap grid-2">
+        <div className="wrap grid-2 art-grid">
           <img
+            className="art-photo"
             src="/assets/program-art.webp"
             width={1200}
             height={900}
@@ -28,7 +29,7 @@ export default function Courses() {
             alt="A student painting a bright red and yellow flower still life on canvas"
             style={{ borderRadius: 24 }}
           />
-          <div>
+          <div className="art-text">
             <h2 id="art-h">Art &amp; Design</h2>
             <p>
               <strong>Instructor:</strong> Pognee Kim, a licensed NYS teacher.
@@ -48,6 +49,17 @@ export default function Courses() {
               See art pricing
             </Link>
           </div>
+          <figure className="art-extra">
+            <img
+              src="/assets/program-tshirt.webp"
+              width={1200}
+              height={900}
+              loading="lazy"
+              alt="An instructor showing a student how to use a heat press to make a custom T-shirt"
+              style={{ borderRadius: 24 }}
+            />
+            <figcaption>T-shirt Making &amp; Design class</figcaption>
+          </figure>
         </div>
       </section>
 

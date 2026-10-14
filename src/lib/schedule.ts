@@ -1,8 +1,10 @@
 // Weekly classes, events, and closures for the /schedule page. Class times
 // are the owners' regular schedule, checked against their October 2026
-// calendar. Entries marked `placeholder` show a "Placeholder" tag: replace
-// them with real events and closures (or delete them) before launch. An empty
-// list shows a "nothing posted" line instead.
+// calendar. An empty events or closures list shows a "nothing posted" line.
+//
+// Give an event or closure an `end` date (YYYY-MM-DD) and it drops off the
+// page by itself the day after. A closure with `banner: true` also shows in a
+// bar at the top of every page until its `end` date.
 export interface ClassSlot {
   name: string;
   time: string;
@@ -17,7 +19,21 @@ export interface Notice {
   date: string;
   title: string;
   details?: string;
-  placeholder?: boolean;
+  icon?: string; // decorative emoji shown around the title
+  end?: string; // YYYY-MM-DD, last day the notice is relevant
+  banner?: boolean; // closures only: also announce in the site-wide bar
+}
+
+/** Today's date in the visitor's time zone, as YYYY-MM-DD. */
+function today() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+/** Notices whose `end` date hasn't passed (notices without one always stay). */
+export function current(items: Notice[]) {
+  const t = today();
+  return items.filter((n) => !n.end || n.end >= t);
 }
 
 export const WEEKLY: ClassDay[] = [
@@ -50,20 +66,15 @@ export const WEEKLY: ClassDay[] = [
   },
 ];
 
-export const EVENTS: Notice[] = [
-  {
-    date: "Date to be announced",
-    title: "Student art & T-shirt showcase",
-    details: "See artwork and custom T-shirts made in our classes.",
-    placeholder: true,
-  },
-];
+export const EVENTS: Notice[] = [];
 
 export const CLOSURES: Notice[] = [
   {
-    date: "Dates to be announced",
-    title: "Holiday closures",
-    details: "Holiday, weather, and other closures will be posted here.",
-    placeholder: true,
+    date: "November 23–28, 2026",
+    title: "Thanksgiving Holiday Break",
+    details: "TEMPO Community Academy will be closed November 23–28, 2026, for Thanksgiving break. Wishing all our students and families a wonderful Thanksgiving! 🧡",
+    icon: "🍂",
+    end: "2026-11-28",
+    banner: true,
   },
 ];

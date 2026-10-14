@@ -28,6 +28,7 @@ const IMAGES = [
   ["Class photos/Events/IMG_4181.jpg", "hero-community.webp", { ...HERO, focus: [0.5, 0.6] }],
 
   ["Class photos/Art - Fine Art/IMG_5328.jpeg", "program-art.webp", { ...CARD, focus: [0.5, 0.3] }],
+  ["Class photos/Art- Tshirt desingning/IMG_7352.jpeg", "program-tshirt.webp", { ...CARD, focus: [0.5, 0.4] }],
   ["Class photos/Cooking/SongPyeonRiceCake/IMG_7192.jpg", "program-cooking.webp", { ...CARD, focus: [0.5, 0.35] }],
   ["Class photos/Dance&Body Form/IMG_1584.jpeg", "program-dance.webp", { ...CARD, focus: [0.5, 0.6] }],
   ["Class photos/Computer /IMG_6967.jpeg", "program-computer-science.webp", { ...CARD, focus: [0.55, 0.5] }],

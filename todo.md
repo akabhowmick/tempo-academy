@@ -21,9 +21,6 @@
         www and every page loads on the real domain.
   - [ ] Only then cancel the Squarespace site.
 - [ ] **[owner]** Schedule page (`src/lib/schedule.ts`):
-  - [ ] Replace the placeholder event and closure (shown with a
-        "Placeholder" tag) with real ones, or delete them, before the DNS
-        transfer.
   - [ ] Confirm Wednesday art: the October calendar shows two "Art - Snack
         Studio" classes (4-5 and 5-6 PM), the owners' schedule shows only
         Art 5-6 PM. What is "Snack Studio"?

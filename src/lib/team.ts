@@ -76,9 +76,9 @@ export const INSTRUCTORS: Person[] = [
     role: "Cooking & Baking",
     img: "team-jin-bok.webp",
     imgAlt: "Cartoon illustration of a smiling chef",
-    teaser: "Chef Jin holds professional certifications in Korean and Chinese cuisine from her culinary career in South Korea.",
+    teaser: "Chef Jin holds professional certifications in Korean and Japanese cuisine from her culinary career in South Korea.",
     bio: [
-      "Chef Jin holds professional certifications in both Korean and Chinese cuisine, earned during her culinary career in South Korea.",
+      "Chef Jin holds professional certifications in both Korean and Japanese cuisine, earned during her culinary career in South Korea.",
       "She brings a passion for cooking and enjoys working with individuals from diverse cultural backgrounds. She is dedicated to creating a welcoming, inclusive, and engaging culinary experience for everyone.",
     ],
   },

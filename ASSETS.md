@@ -14,6 +14,7 @@ PDFs, no testimonials.
 | --- | --- | --- | --- |
 | `Class photos/Events/IMG_4181.jpg` | Large community group photo at a trampoline park, ~40 people, staff in green TCA shirts, everyone smiling at camera. Landscape 4:3, bright and colorful | Home hero, replaces the SVG bar illustration in `.hero-art` (`Home.tsx`) | `hero-community.webp` |
 | `Class photos/Art - Fine Art/IMG_5328.jpeg` | Close-up of hands painting a bright flower still life on canvas, paints and brushes around | Art card (`Home.tsx` PROGRAMS) + Art section (`Courses.tsx`) | `program-art.webp` |
+| `Class photos/Art- Tshirt desingning/IMG_7352.jpeg` | Instructor showing a student how to use the heat press (4:3 crop of the gallery T-shirt photo) | Art & Design section, "T-shirt Making & Design class" photo (`Courses.tsx`) | `program-tshirt.webp` |
 | `Class photos/Cooking/SongPyeonRiceCake/IMG_7192.jpg` | Instructor in green TCA shirt guiding students shaping songpyeon rice cakes at a table of mixing bowls | Cooking card (`Home.tsx`) + Cooking section (`Courses.tsx`) | `program-cooking.webp` |
 | `Class photos/Dance&BodyForm/IMG_1584.jpeg` | Instructor on stage leading two students in a squat/movement exercise in the dance room | Dance card (`Home.tsx`) + Dance section (`Courses.tsx`) | `program-dance.webp` |
 | `Class photos/Computer /IMG_6967.jpeg` | Students working on laptops around a wooden table, instructor at the head of the table. Landscape | CS card (`Home.tsx`) + CS section (`Courses.tsx`) | `program-computer-science.webp` |

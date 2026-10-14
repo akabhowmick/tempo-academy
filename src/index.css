@@ -78,6 +78,12 @@ a:hover{color:var(--green-900)}
 .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem}
 @media(max-width:960px){.grid-3{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.grid-3,.grid-2{grid-template-columns:1fr}}
+/* Courses > Art: photos stack on the left, text spans both rows. On phones
+   the grid is one column and items follow source order: photo, text, T-shirt photo. */
+.art-grid{grid-template-areas:"photo text" "extra text"}
+.art-photo{grid-area:photo}.art-text{grid-area:text;align-self:center}.art-extra{grid-area:extra;margin:0}
+.art-extra figcaption{margin-top:.6rem;color:var(--ink-soft);font-size:.92rem}
+@media(max-width:640px){.art-grid{grid-template-areas:none}.art-photo,.art-text,.art-extra{grid-area:auto}}
 .card{background:var(--white);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
 .card img{aspect-ratio:4/3;object-fit:cover;width:100%}
 .card-body{padding:1.4rem 1.5rem 1.6rem;display:flex;flex-direction:column;gap:.3rem;flex:1}
@@ -107,12 +113,18 @@ a:hover{color:var(--green-900)}
 .price-row:last-child{border-bottom:0}
 .price-row .amt{font-weight:800;color:var(--green-700);white-space:nowrap}
 .price-note{color:var(--ink-soft);font-size:.95rem}
+.notice-head{display:flex;align-items:center;gap:1.1rem;margin-bottom:1.2rem}
+.notice-head h2{margin:0}
+.notice-art{flex:none;width:150px;height:auto}
+@media(max-width:640px){.notice-art{width:96px}}
 .notice-list{list-style:none;padding:0;margin:0;display:grid;gap:1rem}
-.notice-list li{background:var(--cream-50);border-radius:var(--r-md);padding:1.2rem 1.4rem}
+.notice-list li,.notice-empty{background:var(--cream-50);border-radius:var(--r-md);padding:1.2rem 1.4rem}
+.notice-empty{margin:0;color:var(--ink-soft)}
 .notice-list h3{font-size:1.1rem;margin:.2rem 0 .3rem}
 .notice-list p{margin:0;color:var(--ink-soft)}
 .notice-list .notice-date{font-weight:700;color:var(--green-700);font-size:.92rem}
-.tag{display:inline-block;margin-left:.6rem;padding:.05rem .6rem;border-radius:999px;background:var(--apricot);color:var(--ink);font-size:.75rem;font-weight:700;vertical-align:.1em}
+.closure-banner{background:var(--apricot);color:var(--ink);font-size:.95rem;padding:.6rem 0;text-align:center}
+.closure-banner a{color:var(--green-900);font-weight:700}
 .person{background:var(--white);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:1.5rem;display:flex;flex-direction:column}
 .person img,.person .initials{width:96px;height:96px;border-radius:50%;object-fit:cover;margin-bottom:1rem}
 .person .initials{display:grid;place-items:center;background:var(--green-100);color:var(--green-700);font:800 1.6rem/1 "Bricolage Grotesque",sans-serif}

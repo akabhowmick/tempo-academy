@@ -1,20 +1,24 @@
+import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { useSeo } from "@/lib/useSeo";
 import routeMeta from "@/lib/route-meta.json";
-import { WEEKLY, EVENTS, CLOSURES, type Notice } from "@/lib/schedule";
+import { MegaphoneArt, ClosedSignArt } from "@/components/NoticeArt";
+import { WEEKLY, EVENTS, CLOSURES, current, type Notice } from "@/lib/schedule";
 
-function NoticeList({ items, empty }: { items: Notice[]; empty: string }) {
-  if (items.length === 0) return <p className="price-note">{empty}</p>;
+function NoticeList({ items, empty }: { items: Notice[]; empty: ReactNode }) {
+  const shown = current(items);
+  if (shown.length === 0) return <p className="notice-empty">{empty}</p>;
   return (
     <ul className="notice-list">
-      {items.map((n) => (
+      {shown.map((n) => (
         <li key={`${n.date} ${n.title}`}>
-          <p className="notice-date">
-            {n.date}
-            {n.placeholder && <span className="tag">Placeholder</span>}
-          </p>
-          <h3>{n.title}</h3>
+          <p className="notice-date">{n.date}</p>
+          <h3>
+            {n.icon && <span aria-hidden="true">{n.icon} </span>}
+            {n.title}
+            {n.icon && <span aria-hidden="true"> {n.icon}</span>}
+          </h3>
           {n.details && <p>{n.details}</p>}
         </li>
       ))}
@@ -61,11 +65,20 @@ export default function Schedule() {
       <section className="section section-alt">
         <div className="wrap grid-2">
           <div>
-            <h2>Upcoming events</h2>
-            <NoticeList items={EVENTS} empty="No upcoming events posted right now." />
+            <div className="notice-head">
+              <MegaphoneArt />
+              <h2>Upcoming events</h2>
+            </div>
+            <NoticeList
+              items={EVENTS}
+              empty={<>No upcoming events posted right now. Check back soon, or follow us on <a href="https://www.instagram.com/tempocommunity_academy1/">Instagram</a> for updates.</>}
+            />
           </div>
           <div>
-            <h2>Closures &amp; holidays</h2>
+            <div className="notice-head">
+              <ClosedSignArt />
+              <h2>Closures &amp; holidays</h2>
+            </div>
             <NoticeList items={CLOSURES} empty="No closures coming up. We're open as usual." />
           </div>
         </div>
