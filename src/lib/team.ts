@@ -21,7 +21,8 @@ export const LEADERSHIP: Person[] = [
     credentials: "M.A. Ed.",
     role: "Co-founder & Program Director",
     img: "team-inae-kim.webp",
-    teaser: "An educator for more than 20 years, Inae dreamed of a community where learning feels joyful, meaningful, and lifelong.",
+    teaser:
+      "An educator for more than 20 years, Inae dreamed of a community where learning feels joyful, meaningful, and lifelong.",
     bio: [
       "With more than 20 years of experience as an educator in the school system, I have always dreamed of creating a community where learning feels joyful, meaningful, and lifelong.",
       "I wanted to build a place where students can come not only to take a class, but also to learn, connect, spend time together, and truly feel that they belong.",
@@ -37,7 +38,8 @@ export const LEADERSHIP: Person[] = [
     credentials: "M.S. Ed., M.S., SBL",
     role: "Co-founder & Admin Director",
     img: "team-cynthia-martinez.webp",
-    teaser: "With more than two decades in education, Cynthia believes learning should prepare us not only for school, but for life.",
+    teaser:
+      "With more than two decades in education, Cynthia believes learning should prepare us not only for school, but for life.",
     bio: [
       "Education has been at the center of my career for more than two decades. Throughout that time, I have worked in classrooms, programs, and schools, and have had the opportunity to see firsthand how much people can learn when they are given meaningful opportunities to participate, practice, and discover their strengths.",
       "I have always believed that education should prepare us not only for school, but for life. Learning how to cook a meal, manage responsibilities, try something unfamiliar, work with others, develop a new interest, or simply become more confident are all important parts of becoming independent and living a fulfilling life.",
@@ -50,7 +52,8 @@ export const LEADERSHIP: Person[] = [
     name: "Cesia Maldonado",
     role: "Office Manager and Computer Science, Beginner",
     img: "team-cesia-maldonado.webp",
-    teaser: "Cesia keeps daily operations organized and teaches the basics of computers in a fun, simple, and engaging way.",
+    teaser:
+      "Cesia keeps daily operations organized and teaches the basics of computers in a fun, simple, and engaging way.",
     bio: [
       "I'm Cesia Maldonado, and I am the Office Manager and Beginner Computer Class Instructor. I love being part of a welcoming and supportive environment where everyone feels comfortable learning and growing.",
       "I help keep our daily operations organized while teaching students the basics of computers and technology in a fun, simple, and engaging way. I enjoy connecting with students and celebrating their progress along the way!",
@@ -64,7 +67,8 @@ export const INSTRUCTORS: Person[] = [
     name: "Pognee Kim",
     role: "Art & Design and Computer Science, Advanced. Licensed NYS teacher",
     img: "team-pognee-kim.webp",
-    teaser: "A special education teacher for more than 10 years, Mr. Kim teaches Computer Animation and T-Shirt Making.",
+    teaser:
+      "A special education teacher for more than 10 years, Mr. Kim teaches Computer Animation and T-Shirt Making.",
     bio: [
       "Mr. Kim is a special education teacher with more than 10 years of experience, specializing in teaching students with autism.",
       "He teaches Computer Animation and T-Shirt Making classes where students build on their creativity and work on daily living skills.",
@@ -76,7 +80,8 @@ export const INSTRUCTORS: Person[] = [
     role: "Cooking & Baking",
     img: "team-jin-bok.webp",
     imgAlt: "Cartoon illustration of a smiling chef",
-    teaser: "Chef Jin holds professional certifications in Korean and Japanese cuisine from her culinary career in South Korea.",
+    teaser:
+      "Chef Jin holds professional certifications in Korean and Japanese cuisine from her culinary career in South Korea.",
     bio: [
       "Chef Jin holds professional certifications in both Korean and Japanese cuisine, earned during her culinary career in South Korea.",
       "She brings a passion for cooking and enjoys working with individuals from diverse cultural backgrounds. She is dedicated to creating a welcoming, inclusive, and engaging culinary experience for everyone.",
@@ -98,7 +103,8 @@ export const INSTRUCTORS: Person[] = [
     name: "Halle Kim",
     role: "Dance & Body Form. Certified Pilates instructor, registered nurse",
     img: "team-halle-kim.webp",
-    teaser: "A BASI Pilates–certified instructor and registered nurse who believes everyone can benefit from movement.",
+    teaser:
+      "A BASI Pilates–certified instructor and registered nurse who believes everyone can benefit from movement.",
     bio: [
       "I'm a BASI Pilates–certified instructor and registered nurse who believes everyone can benefit from movement.",
       "My goal is to create a welcoming and supportive environment where each person can build strength, confidence, and body awareness at their own pace.",
@@ -109,4 +115,8 @@ export const INSTRUCTORS: Person[] = [
 export const TEAM = [...LEADERSHIP, ...INSTRUCTORS];
 
 export const firstName = (p: Person) => p.name.split(" ")[0];
-export const initials = (p: Person) => p.name.split(" ").map((w) => w[0]).join("");
+export const initials = (p: Person) =>
+  p.name
+    .split(" ")
+    .map((w) => w[0])
+    .join("");
